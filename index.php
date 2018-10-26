@@ -141,7 +141,7 @@
                                 
                                 <!--================ Content Section Rooms ================-->
                                 <section class="milenia-section milenia-color--black milenia-section--stretched milenia-colorizer--scheme-lightest">
-                                    <h6 class="milenia-section-subtitle milenia-color--unchangeable text-center">The pleasure of luxury</h6>
+                                    <h6 class="milenia-section-subtitle milenia-color--unchangeable text-center">The pleasure of</h6>
                                     <h2 class="milenia-section-title text-center">Rooms &amp; Suites</h2>
                                     <!--================ Tabs ================-->
                                     <div class="milenia-tabs milenia-tabs--unstyled">
