@@ -99,12 +99,17 @@
                                                                     <div class="milenia-entity-meta">
                                                                         <div>from  <strong class='milenia-entity-price'>$99.00</strong>/night</div>
                                                                     </div>
-                                                                    <h2 class="milenia-entity-title"><a href="#" class="milenia-color--unchangeable">Classic Balcony Room</a></h2>
+                                                                    <h2 class="milenia-entity-title">
+                                                                        <a href="view-accommodations.php" class="milenia-color--unchangeable">Classic Balcony Room</a>
+                                                                    </h2>
                                                                 </header>
                                                                 <div class="milenia-entity-body">
                                                                     <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.</p>
                                                                 </div>
-                                                                <footer class="milenia-entity-footer"><a href="#" class="milenia-btn">Details</a><a href="#" class="milenia-btn milenia-btn--scheme-primary">Book Now</a></footer>
+                                                                <footer class="milenia-entity-footer">
+                                                                    <a href="view-accommodations.php" class="milenia-btn">Details</a>
+                                                                    <a href="view-accommodations.php" class="milenia-btn milenia-btn--scheme-primary">Book Now</a>
+                                                                </footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -128,12 +133,17 @@
                                                                     <div class="milenia-entity-meta">
                                                                         <div>from  <strong class='milenia-entity-price'>$199.00</strong>/night</div>
                                                                     </div>
-                                                                    <h2 class="milenia-entity-title"><a href="#" class="milenia-color--unchangeable">Superior Double Room</a></h2>
+                                                                    <h2 class="milenia-entity-title">
+                                                                        <a href="view-accommodations.php" class="milenia-color--unchangeable">Superior Double Room</a>
+                                                                    </h2>
                                                                 </header>
                                                                 <div class="milenia-entity-body">
                                                                     <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
                                                                 </div>
-                                                                <footer class="milenia-entity-footer"><a href="#" class="milenia-btn">Details</a><a href="#" class="milenia-btn milenia-btn--scheme-primary">Book Now</a></footer>
+                                                                <footer class="milenia-entity-footer">
+                                                                    <a href="view-accommodations.php" class="milenia-btn">Details</a>
+                                                                    <a href="view-accommodations.php" class="milenia-btn milenia-btn--scheme-primary">Book Now</a>
+                                                                </footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -157,12 +167,17 @@
                                                                     <div class="milenia-entity-meta">
                                                                         <div>from  <strong class='milenia-entity-price'>$299.00</strong>/night</div>
                                                                     </div>
-                                                                    <h2 class="milenia-entity-title"><a href="#" class="milenia-color--unchangeable">Superior Balcony Double Room</a></h2>
+                                                                    <h2 class="milenia-entity-title">
+                                                                        <a href="view-accommodations.php" class="milenia-color--unchangeable">Superior Balcony Double Room</a>
+                                                                    </h2>
                                                                 </header>
                                                                 <div class="milenia-entity-body">
                                                                     <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
                                                                 </div>
-                                                                <footer class="milenia-entity-footer"><a href="#" class="milenia-btn">Details</a><a href="#" class="milenia-btn milenia-btn--scheme-primary">Book Now</a></footer>
+                                                                <footer class="milenia-entity-footer">
+                                                                    <a href="view-accommodations.php" class="milenia-btn">Details</a>
+                                                                    <a href="view-accommodations.php" class="milenia-btn milenia-btn--scheme-primary">Book Now</a>
+                                                                </footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -186,12 +201,17 @@
                                                                     <div class="milenia-entity-meta">
                                                                         <div>from  <strong class='milenia-entity-price'>$399.00</strong>/night</div>
                                                                     </div>
-                                                                    <h2 class="milenia-entity-title"><a href="#" class="milenia-color--unchangeable">Delux Double Room</a></h2>
+                                                                    <h2 class="milenia-entity-title">
+                                                                        <a href="view-accommodations.php" class="milenia-color--unchangeable">Delux Double Room</a>
+                                                                    </h2>
                                                                 </header>
                                                                 <div class="milenia-entity-body">
                                                                     <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
                                                                 </div>
-                                                                <footer class="milenia-entity-footer"><a href="#" class="milenia-btn">Details</a><a href="#" class="milenia-btn milenia-btn--scheme-primary">Book Now</a></footer>
+                                                                <footer class="milenia-entity-footer">
+                                                                    <a href="view-accommodations.php" class="milenia-btn">Details</a>
+                                                                    <a href="view-accommodations.php" class="milenia-btn milenia-btn--scheme-primary">Book Now</a>
+                                                                </footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -215,12 +235,17 @@
                                                                     <div class="milenia-entity-meta">
                                                                         <div>from  <strong class='milenia-entity-price'>$499.00</strong>/night</div>
                                                                     </div>
-                                                                    <h2 class="milenia-entity-title"><a href="#" class="milenia-color--unchangeable">Grand Deluxe Room</a></h2>
+                                                                    <h2 class="milenia-entity-title">
+                                                                        <a href="view-accommodations.php" class="milenia-color--unchangeable">Grand Deluxe Room</a>
+                                                                    </h2>
                                                                 </header>
                                                                 <div class="milenia-entity-body">
                                                                     <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
                                                                 </div>
-                                                                <footer class="milenia-entity-footer"><a href="#" class="milenia-btn">Details</a><a href="#" class="milenia-btn milenia-btn--scheme-primary">Book Now</a></footer>
+                                                                <footer class="milenia-entity-footer">
+                                                                    <a href="view-accommodations.php" class="milenia-btn">Details</a>
+                                                                    <a href="view-accommodations.php" class="milenia-btn milenia-btn--scheme-primary">Book Now</a>
+                                                                </footer>
                                                             </div>
                                                         </div>
                                                     </div>
