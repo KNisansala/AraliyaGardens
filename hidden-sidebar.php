@@ -24,7 +24,7 @@
                     <a href="facilities.php" class="milenia-ln--independent">Facilities</a>
                 </li>
                 <li class="menu-item menu-item-has-children">
-                    <a href="rooms.php" class="milenia-ln--independent">Rooms</a>
+                    <a href="accommodations.php" class="milenia-ln--independent">Accommodations</a>
                 </li>
                 <li class="menu-item menu-item-has-children">
                     <a href="things-to-do.php" class="milenia-ln--independent">Thing TO Do</a>
