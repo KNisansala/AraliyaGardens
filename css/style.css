@@ -1688,12 +1688,12 @@ Headers:    'Abril Fatface' sans-serif;
         }
 
         body.milenia-body--border-layout {
-            padding: 1.5625rem;
+            padding: 0px;
         }
 
         body.milenia-body--border-layout [class*="milenia-header-section--sticky"].milenia-header-section--sticked {
-            left: 1.5625rem;
-            right: 1.5625rem;
+            left: 0px;
+            right: 0px;
         }
 
         body.milenia-body--border-layout .forcefullwidth_wrapper_tp_banner {
