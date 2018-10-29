@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <!--================ Basic page needs ================-->
-        <title>Milenia | Home</title>
+        <title>Araliya Gardens | Home</title>
         <meta charset="UTF-8">
         <meta name="author" content="">
         <meta name="keywords" content="">

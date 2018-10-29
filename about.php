@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!--================ Basic page needs ================-->
-    <title>Milenia | About Us</title>
+    <title>Araliya Gardens | About Us</title>
     <meta charset="UTF-8">
     <meta name="author" content="">
     <meta name="keywords" content="">
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!--================ Vendor JS ================-->
   </head>
-  <body class="milenia-body--scheme-blue milenia-body--border-layout">
+  <body class="milenia-body--scheme-lightbrown">
     <div class="milenia-preloader"></div>
     <!--================ Hidden Sidebar ================--><span class="milenia-sidebar-hidden-overlay"></span>
     <?php
