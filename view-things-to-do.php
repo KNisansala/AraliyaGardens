@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!--================ Theme CSS ================-->
         <link rel="stylesheet" href="css/style.css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
         <!--================ Vendor JS ================-->
     </head>
     <body class="milenia-body--scheme-lightbrown">

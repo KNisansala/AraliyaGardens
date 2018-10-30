@@ -132,7 +132,7 @@
                                         </div>
                                         <div class="col-lg-6 offset-lg-1">
                                             <figure class="milenia-album"><img src="images/single-gallery-image-1.jpg" alt="">
-                                                <div class="milenia-action-buttons"><a href="#" role="button" data-fancybox-album-src="[{&quot;src&quot;: &quot;images/rooms-list-image-18.jpg&quot;, &quot;opts&quot;: {&quot;caption&quot;: &quot;Caption 1&quot;}}, {&quot;src&quot;: &quot;images/rooms-list-image-15.jpg&quot;, &quot;opts&quot;: {&quot;caption&quot;: &quot;Caption 2&quot;}}, {&quot;src&quot;: &quot;images/rooms-list-image-16.jpg&quot;, &quot;opts&quot;: {&quot;caption&quot;: &quot;Caption 3&quot;}}]" class="milenia-ln--independent"><i class="icon icon-pictures"></i></a><a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox class="milenia-ln--independent"><i class="icon icon-camera-play"></i></a></div>
+                                                <div class="milenia-action-buttons"></div>
                                             </figure>
                                         </div>
                                     </div>

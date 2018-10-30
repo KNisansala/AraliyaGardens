@@ -42,10 +42,10 @@
                     <div class="milenia-grid-item-content">
                       <nav class="milenia-tt-uppercase">
                         <ul>
-                          <li><a href="#">About</a></li>
-                          <li><a href="#">Special Offers</a></li>
-                          <li><a href="#">News</a></li>
-                          <li><a href="#">Events</a></li>
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Facilities</a></li>
+                          <li><a href="#">Accommodations</a></li>
+                          <li><a href="#">Things To Do</a></li>
                           <li><a href="#">Contact Us</a></li>
                         </ul>
                       </nav>

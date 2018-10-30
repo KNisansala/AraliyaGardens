@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--================ Theme CSS ================-->
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
     <!--================ Vendor JS ================-->
   </head>
   <body class="milenia-body--scheme-lightbrown">
@@ -65,10 +66,10 @@
         </div>
       </div>
       <!--================ End of Breadcrumb ================-->
-      <div class="milenia-content  ">
+      <div class="milenia-content">
         <div class="container">
           <!--================ Content Section ================-->
-          <section class="milenia-section milenia-color--black milenia-section--stretched milenia-colorizer--scheme-white">
+          <section class="milenia-color--black milenia-section--stretched milenia-colorizer--scheme-white">
             <div class="row align-items-center">
               <div class="col-lg-6">
                 <h2 class="milenia-section-title milenia-section-title--style-2">About Araliya Gardens</h2>
@@ -76,7 +77,11 @@
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferme ntum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
                 <p>Integer rutrum ante ue lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus.</p>
               </div>
-              <div class="col-lg-6"><img src="images/about-image-1.jpg" alt=""></div>
+              <div class="col-lg-6">
+                  <figure class="milenia-album">
+                  <img src="images/about-image-1.jpg" alt="">
+                  </figure>
+              </div>
             </div>
           </section>
           <!--================ End of Content Section ================-->
