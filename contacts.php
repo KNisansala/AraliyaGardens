@@ -24,6 +24,7 @@
         <!--================ Theme CSS ================-->
         <link rel="stylesheet" href="css/style.css">
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <link href="contact-form/style.css" rel="stylesheet" type="text/css"/>
         <!--================ Vendor JS ================-->
     </head>
     <body class="milenia-body--scheme-lightbrown milenia-body--border-layout">
@@ -70,7 +71,7 @@
                             <main class="col-lg-4">
                                 <h3>Contact Details</h3>
                                 <!--================ Google Map ================-->
-                                <div id="gmap-1" data-height="340px" data-locations="[{&quot;lat&quot;: 40.7707307, &quot;lon&quot;: -74.0210859, &quot;icon&quot;: &quot;images/marker-blue.png&quot;, &quot;title&quot;: &quot;Main office&quot;}]" class="milenia-gmap"></div>
+                                <!--                                <div id="gmap-1" data-height="340px" data-locations="[{&quot;lat&quot;: 40.7707307, &quot;lon&quot;: -74.0210859, &quot;icon&quot;: &quot;images/marker-blue.png&quot;, &quot;title&quot;: &quot;Main office&quot;}]" class="milenia-gmap"></div>-->
                                 <!--================ End of Google Map ================-->
                                 <ul class="milenia-details-list milenia-list--unstyled">
                                     <li><span class="milenia-tc--dark">Address:&nbsp;</span>9863 - 9867 Mill Road, Cambridge, MG09 99HT</li>
@@ -92,38 +93,74 @@
                             </main>
                             <aside class="col log-8">
                                 <h3>We'd Love To Hear From You!</h3>
-                                <p>Feel free to send us any questions you may have. We are happy to answer them.</p>
-                                <form novalidate class="milenia-contact-form milenia-form--fields-white">
+                                <div novalidate class="milenia-contact-form milenia-form--fields-white">
                                     <div class="form-group">
-                                        <div class="form-col">
-                                            <label for="cf_name">Your Name</label>
-                                            <input type="text" id="cf_name" name="cf_name" required class="form-control">
+                                        <div class="col-md-6">
+                                            <label class="label-top">Your Name<span>*</span></label>
+                                            <input type="text" name="txtFullName" id="txtFullName" class="form-control input-validater">
+                                            <span id="spanFullName" ></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="label-top">Your Email<span>*</span></label>
+                                            <input type="text" name="txtEmail" id="txtEmail" class="form-control input-validater">
+                                            <span id="spanEmail" ></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            <label class="label-top">Your Country<span>*</span></label>
+                                            <input type="text" name="txtCountry"  id="txtCountry" class="form-control input-validater">
+                                            <span id="spanCountry" ></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="label-top">Your Contact No<span>*</span></label>
+                                            <input type="text" name="txtPhone" id="txtPhone" class="form-control input-validater">
+                                            <span id="txtPhone" ></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <label class="label-top">Subject<span>*</span></label>
+                                            <input type="text" name="txtSubject"  id="txtSubject" class="form-control input-validater">
+                                            <span id="spanSubject" ></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <label class="label-top">Message</label>
+                                            <textarea name="txtMessage"  id="txtMessage" rows="4" class="form-control"></textarea>
+                                            <span id="spanMessage" ></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            <label for="comment" id="form-label" class="label-top">Security Code:<span class="red">*</span></label>
+                                            <input type="text" name="captchacode" id="captchacode" class="input-validater" placeholder="Security code >> ">
+                                            <span id="capspan" ></span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="col-md-3">
+                                                <label></label>
+                                                <span><?php include("./contact-form/captchacode-widget.php"); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            <div class="div-check" >
+                                                <img src="contact-form/img/checking.gif" id="checking"/>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="form-col">
-                                            <label for="cf_email">Your Email</label>
-                                            <input type="email" id="cf_email" name="cf_email" required class="form-control">
+                                            <button type="submit" id="btnSubmit" class="milenia-btn">Submit</button>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="form-col">
-                                            <label for="cf_phone">Phone</label>
-                                            <input type="text" id="cf_phone" name="cf_phone" class="form-control">
-                                        </div>
+                                    <div class="form-col">
+                                        <div id="dismessage" align="center" class="msg-success"></div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="form-col">
-                                            <label for="cf_message">Message</label>
-                                            <textarea id="cf_message" name="cf_message" required rows="7" class="form-control"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-col">
-                                            <button type="submit" class="milenia-btn">Submit</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                </div>
                             </aside>
                         </div>
                     </div>
@@ -155,5 +192,6 @@
         <script src="js/modules/milenia.alert-box.min.js"></script>
         <script src="js/modules/milenia.sticky-header-section.min.js"></script>
         <script src="js/milenia.app.js"></script>
+        <script src="contact-form/scripts.js" type="text/javascript"></script>
     </body>
 </html>
