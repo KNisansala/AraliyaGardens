@@ -1,3 +1,15 @@
+<?php
+include_once(dirname(__FILE__) . '/class/include.php');
+
+$ROOM = new Room(Null);
+$rooms = $ROOM->all();
+
+$COMMENT = new Comments(Null);
+$comments = $COMMENT->all();
+
+$sliders = Slider::all();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -157,20 +169,22 @@
                                         <!--================ Tabs Container ================-->
                                         <div class="milenia-tabs-container">
                                             <!--================ Tab ================-->
+                                            
                                             <div id="tab-1" tabindex="0" role="tabpanel" aria-labelledby="tab-1-link" class="milenia-tab">
                                                 <!--================ Tabbed Carousel ================-->
                                                 <div class="milenia-tabbed-carousel">
                                                     <!--================ Entities (Style 15) ================-->
                                                     <div class="milenia-entities milenia-entities--style-15 milenia-entities--with-tabbed-grid">
                                                         <div id="milenia-grid-tabbed-1" class="milenia-grid milenia-grid--cols-1 milenia-grid--tabbed milenia-grid--tabbed-loading">
+                                                            <?php
+                                                            foreach ($rooms as $room) {
+                                                            ?>
                                                             <div class="milenia-grid-item">
                                                                 <!--================ Entity ================-->
                                                                 <article class="milenia-entity">
                                                                     <div class="milenia-entity-media">
                                                                         <div class="owl-carousel owl-carousel--vadaptive milenia-simple-slideshow">
-                                                                            <div data-bg-image-src="images/rooms-list-image-15.jpg" class="milenia-entity-slide"></div>
-                                                                            <div data-bg-image-src="images/rooms-list-image-16.jpg" class="milenia-entity-slide"></div>
-                                                                            <div data-bg-image-src="images/rooms-list-image-17.jpg" class="milenia-entity-slide"></div>
+                                                                            <div data-bg-image-src="upload/room/<?php echo $room['image_name'] ?>" class="milenia-entity-slide"></div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="milenia-entity-content milenia-aligner">
@@ -178,49 +192,27 @@
                                                                             <div class="milenia-aligner-inner">
                                                                                 <header class="milenia-entity-header">
                                                                                     <div class="milenia-entity-meta">
-                                                                                        <div>from  <strong class='milenia-entity-price'>$99.00</strong>/night</div>
+                                                                                        <div>from  <strong class='milenia-entity-price'>$<?php echo number_format($room['price']) ?></strong>/night</div>
                                                                                     </div>
-                                                                                    <h2 class="milenia-entity-title"><a href="#" class="milenia-color--unchangeable">Classic Balcony Room</a></h2>
+                                                                                    <h2 class="milenia-entity-title">
+                                                                                        <a href="view-accommodations.php?id=<?php echo $room["id"]; ?>" class="milenia-color--unchangeable"><?php echo $room['title']; ?></a></h2>
                                                                                 </header>
                                                                                 <div class="milenia-entity-body">
-                                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget.</p>
+                                                                                    <p><?php echo substr($room['short_description'], 0, 400) . '...'; ?></p>
                                                                                 </div>
-                                                                                <footer class="milenia-entity-footer"><a href="#" class="milenia-btn">Details</a><a href="#" class="milenia-btn milenia-btn--scheme-primary">Book Now</a></footer>
+                                                                                <footer class="milenia-entity-footer">
+                                                                                    <a href="view-accommodations.php?id=<?php echo $room["id"]; ?>" class="milenia-btn">Details</a>
+                                                                                    <a href="#" class="milenia-btn milenia-btn--scheme-primary">Book Now</a>
+                                                                                </footer>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </article>
                                                                 <!--================ End of Entity ================-->
                                                             </div>
-                                                            <div class="milenia-grid-item">
-                                                                <!--================ Entity ================-->
-                                                                <article class="milenia-entity">
-                                                                    <div class="milenia-entity-media">
-                                                                        <div class="owl-carousel owl-carousel--vadaptive milenia-simple-slideshow">
-                                                                            <div data-bg-image-src="images/rooms-list-image-18.jpg" class="milenia-entity-slide"></div>
-                                                                            <div data-bg-image-src="images/rooms-list-image-15.jpg" class="milenia-entity-slide"></div>
-                                                                            <div data-bg-image-src="images/rooms-list-image-16.jpg" class="milenia-entity-slide"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="milenia-entity-content milenia-aligner">
-                                                                        <div class="milenia-aligner-outer">
-                                                                            <div class="milenia-aligner-inner">
-                                                                                <header class="milenia-entity-header">
-                                                                                    <div class="milenia-entity-meta">
-                                                                                        <div>from  <strong class='milenia-entity-price'>$199.00</strong>/night</div>
-                                                                                    </div>
-                                                                                    <h2 class="milenia-entity-title"><a href="#" class="milenia-color--unchangeable">Superior Double Room</a></h2>
-                                                                                </header>
-                                                                                <div class="milenia-entity-body">
-                                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget. </p>
-                                                                                </div>
-                                                                                <footer class="milenia-entity-footer"><a href="#" class="milenia-btn">Details</a><a href="#" class="milenia-btn milenia-btn--scheme-primary">Book Now</a></footer>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </article>
-                                                                <!--================ End of Entity ================-->
-                                                            </div>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                             <div class="milenia-grid-item">
                                                                 <!--================ Entity ================-->
                                                                 <article class="milenia-entity">
@@ -314,12 +306,18 @@
                                                     <!--================ Thumbnails ================-->
                                                     <div class="milenia-tabbed-carousel-thumbs">
                                                         <div data-tabbed-sync="milenia-grid-tabbed-1" class="milenia-grid milenia-grid--cols-4 owl-carousel--nav-onhover owl-carousel owl-carousel--nav-edges owl-carousel--nav-small">
+                                                            <?php
+                                                            foreach ($rooms as $room) {
+                                                            ?>
                                                             <div class="milenia-grid-item">
                                                                 <figure class="milenia-tabbed-carousel-thumb">
-                                                                    <div data-bg-image-src="images/rooms-list-image-15.jpg" class="milenia-tabbed-carousel-thumb-image"></div>
-                                                                    <figcaption class="milenia-tabbed-carousel-thumb-caption milenia-text-color--darkest">Classic Balcony Room</figcaption>
+                                                                    <div data-bg-image-src="upload/room/<?php echo $room['image_name'] ?>" class="milenia-tabbed-carousel-thumb-image"></div>
+                                                                    <figcaption class="milenia-tabbed-carousel-thumb-caption milenia-text-color--darkest"><?php echo $room['title']; ?></figcaption>
                                                                 </figure>
                                                             </div>
+                                                            <?php
+                                                            }
+                                                            ?>
                                                             <div class="milenia-grid-item">
                                                                 <figure class="milenia-tabbed-carousel-thumb">
                                                                     <div data-bg-image-src="images/rooms-list-image-18.jpg" class="milenia-tabbed-carousel-thumb-image"></div>
@@ -349,6 +347,7 @@
                                                     <!--================ End of Thumbnails ================-->
                                                 </div>
                                             </div>
+                                            
                                             <!--================ End of Tab ================-->
                                             <!--================ Tab ================-->
                                             <div id="tab-2" tabindex="0" role="tabpanel" aria-labelledby="tab-2-link" class="milenia-tab">
@@ -1141,45 +1140,25 @@
                         <!--================ Testimonials ================-->
                         <div class="milenia-testimonials milenia-testimonials--style-2">
                           <div class="milenia-grid owl-carousel">
+                              <?php
+                              foreach ($comments as $comment) {
+                              ?>
                               <div class="milenia-grid-item">
                                 <!--================ Testimonial ================-->
                                 <div class="milenia-testimonial">
-                                  <blockquote aria-labelledby="testimonial-cite-11" class="milenia-blockquote--unstyled milenia-text-color--darkest">“Food - check. Accommodation - check. Scenery - check. Pool - check. Yes I think this could be the most perfect place to be in the world!”</blockquote>
+                                  <blockquote aria-labelledby="testimonial-cite-11" class="milenia-blockquote--unstyled milenia-text-color--darkest"><?php echo $comment['comment']; ?></blockquote>
                                   <footer class="milenia-author">
-                                    <div data-bg-image-src="images/author-image-6.png" class="milenia-author-photo"></div>
+                                    <div data-bg-image-src="upload/comments/<?php echo $comment['image_name'] ?>" class="milenia-author-photo"></div>
                                     <div class="milenia-author-info">
-                                      <cite id="testimonial-cite-11">ADAM SMITH, FL, USA</cite>
+                                      <cite id="testimonial-cite-11"><?php echo $comment['name']; ?>,<?php echo $comment['title']; ?></cite>
                                     </div>
                                   </footer>
                                 </div>
                                 <!--================ End of Testimonial ================-->
                               </div>
-                            <div class="milenia-grid-item">
-                              <!--================ Testimonial ================-->
-                              <div class="milenia-testimonial">
-                                <blockquote aria-labelledby="testimonial-cite-10" class="milenia-blockquote--unstyled milenia-text-color--darkest">“Food - check. Accommodation - check. Scenery - check. Yes I think this could be the most perfect place to be in the world!”</blockquote>
-                                <footer class="milenia-author">
-                                  <div data-bg-image-src="images/author-image-1.png" class="milenia-author-photo"></div>
-                                  <div class="milenia-author-info">
-                                    <cite id="testimonial-cite-10">Rebecca Johnson, Ca, USA</cite>
-                                  </div>
-                                </footer>
-                              </div>
-                              <!--================ End of Testimonial ================-->
-                            </div>
-                            <div class="milenia-grid-item">
-                              <!--================ Testimonial ================-->
-                              <div class="milenia-testimonial">
-                                <blockquote aria-labelledby="testimonial-cite-12" class="milenia-blockquote--unstyled milenia-text-color--darkest">“Food - check. Accommodation - check. Scenery - check. Pool - check. Yes I think this could be the most perfect place to be in the world!”</blockquote>
-                                <footer class="milenia-author">
-                                  <div data-bg-image-src="images/author-image-7.png" class="milenia-author-photo"></div>
-                                  <div class="milenia-author-info">
-                                    <cite id="testimonial-cite-12">AMANDA JACKSON, NY, USA</cite>
-                                  </div>
-                                </footer>
-                              </div>
-                              <!--================ End of Testimonial ================-->
-                            </div>
+                              <?php
+                              }
+                              ?>
                           </div>
                         </div>
                         <!--================ End of Testimonials ================-->
