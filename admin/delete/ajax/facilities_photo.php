@@ -5,12 +5,12 @@ include_once(dirname(__FILE__) . '/../../auth.php');
 
 if ($_POST['option'] == 'delete') {
 
-    $SERVICE_PHOTO = new ServicePhoto($_POST['id']);
+    $FACILITIES_PHOTO = new FacilitiesPhoto($_POST['id']);
 
-    unlink('../../../upload/service/gallery/' . $SERVICE_PHOTO->image_name);
-    unlink('../../../upload/service/gallery/thumb/' . $SERVICE_PHOTO->image_name);
+    unlink('../../../upload/facilities/gallery/' . $FACILITIES_PHOTO->image_name);
+    unlink('../../../upload/facilities/gallery/thumb/' . $FACILITIES_PHOTO->image_name);
 
-    $result = $SERVICE_PHOTO->delete();
+    $result = $FACILITIES_PHOTO->delete();
 
 
     if ($result) {

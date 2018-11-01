@@ -1,3 +1,10 @@
+<?php
+include_once(dirname(__FILE__) . '/class/include.php');
+
+$FACILITIES = new Facilities(Null);
+$Facilities = $FACILITIES->all();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -60,7 +67,7 @@
                 <div class="container">
                     <h1 class="milenia-page-title">Facilities</h1>
                     <nav class="milenia-breadcrumb-path">
-                        <span><a href="./">Home</a></span>/<span>Grid Blog v2</span>
+                        <span><a href="./">Home</a></span>/<span>Facilities</span>
                     </nav>
                 </div>
             </div>
@@ -75,165 +82,39 @@
                                     <!--================ Entities (Style 1) ================-->
                                     <div class="milenia-entities milenia-entities--style-1">
                                         <div class="milenia-grid milenia-grid--cols-3">
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity milenia-entity--format-image">
-                                                    <div class="milenia-entity-media">
-                                                        <a href="#" aria-labelledby="entity-heading-0" class="milenia-ln--independent" style="background-position: 0% 387.983px;">
-                                                            <img src="images/info-box-image-1.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 id="entity-heading-0" class="milenia-entity-title">
-                                                                        <a href="#" class="milenia-color--unchangeable" style="background-position: 0% 47px;">Wellness &amp; Spa</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.</p>
+                                            <?php
+                                            foreach ($Facilities as $facilities) {
+                                                ?>
+                                                <div class="milenia-grid-item">
+                                                    <!--================ Entity ================-->
+                                                    <article class="milenia-entity milenia-entity--format-image">
+                                                        <div class="milenia-entity-media">
+                                                            <a href="#" aria-labelledby="entity-heading-0" class="milenia-ln--independent" style="background-position: 0% 387.983px;">
+                                                                <img src="upload/facilities/<?php echo $facilities['image_name'] ?>" alt=""></a>
+                                                        </div>
+                                                        <div class="milenia-entity-content milenia-aligner">
+                                                            <div class="milenia-aligner-outer">
+                                                                <div class="milenia-aligner-inner">
+                                                                    <header class="milenia-entity-header">
+                                                                        <h2 id="entity-heading-0" class="milenia-entity-title">
+                                                                            <a href="#" class="milenia-color--unchangeable" style="background-position: 0% 47px;"><?php echo $facilities['title'] ?></a>
+                                                                        </h2>
+                                                                    </header>
+                                                                    <div class="milenia-entity-body">
+                                                                        <p><?php echo $facilities['description'] ?></p>
+                                                                    </div>
+<!--                                                                    <footer class="milenia-entity-footer">
+                                                                        <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary" style="background-position: 0% 17px;">Explore More</a>
+                                                                    </footer>-->
                                                                 </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary" style="background-position: 0% 17px;">Explore More</a>
-                                                                </footer>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity milenia-entity--format-image">
-                                                    <div class="milenia-entity-media">
-                                                        <a href="#" aria-labelledby="entity-heading-1" class="milenia-ln--independent" style="background-position: 0% 387.983px;">
-                                                            <img src="images/info-box-image-2.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 id="entity-heading-1" class="milenia-entity-title">
-                                                                        <a href="#" class="milenia-color--unchangeable" style="background-position: 0% 47px;">Restaurants &amp; Bars</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh.</p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary" style="background-position: 0% 17px;">Explore More</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity milenia-entity--format-image">
-                                                    <div class="milenia-entity-media"><a href="#" aria-labelledby="entity-heading-2" class="milenia-ln--independent" style="background-position: 0% 387.983px;"><img src="images/info-box-image-3.jpg" alt=""></a></div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 id="entity-heading-2" class="milenia-entity-title">
-                                                                        <a href="#" class="milenia-color--unchangeable" style="background-position: 0% 47px;">Special Offers</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et.</p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary" style="background-position: 0% 17px;">Explore More</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity milenia-entity--format-image">
-                                                    <div class="milenia-entity-media">
-                                                        <a href="#" aria-labelledby="entity-heading-0" class="milenia-ln--independent" style="background-position: 0% 387.983px;">
-                                                            <img src="images/info-box-image-1.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 id="entity-heading-0" class="milenia-entity-title">
-                                                                        <a href="#" class="milenia-color--unchangeable" style="background-position: 0% 47px;">Meetings & Events</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.</p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary" style="background-position: 0% 17px;">Explore More</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity milenia-entity--format-image">
-                                                    <div class="milenia-entity-media">
-                                                        <a href="#" aria-labelledby="entity-heading-1" class="milenia-ln--independent" style="background-position: 0% 387.983px;">
-                                                            <img src="images/info-box-image-2.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 id="entity-heading-1" class="milenia-entity-title">
-                                                                        <a href="#" class="milenia-color--unchangeable" style="background-position: 0% 47px;">Free City Tour</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh.</p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary" style="background-position: 0% 17px;">Explore More</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity milenia-entity--format-image">
-                                                    <div class="milenia-entity-media">
-                                                        <a href="#" aria-labelledby="entity-heading-2" class="milenia-ln--independent" style="background-position: 0% 387.983px;">
-                                                            <img src="images/info-box-image-3.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 id="entity-heading-2" class="milenia-entity-title">
-                                                                        <a href="#" class="milenia-color--unchangeable" style="background-position: 0% 47px;">Parking</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et.</p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary" style="background-position: 0% 17px;">Explore More</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
+                                                    </article>
+                                                    <!--================ End of Entity ================-->
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                     <!--================ End of Entities (Style 1) ================-->
