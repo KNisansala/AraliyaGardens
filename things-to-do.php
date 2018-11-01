@@ -1,8 +1,15 @@
+<?php
+include_once(dirname(__FILE__) . '/class/include.php');
+
+$THINGS_TO_DO = new ThingsToDo(Null);
+$ThingsToDo = $THINGS_TO_DO->all();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <!--================ Basic page needs ================-->
-        <title>Milenia | Grid Blog v3</title>
+        <title>Araliya Gardens | Things To Do</title>
         <meta charset="UTF-8">
         <meta name="author" content="">
         <meta name="keywords" content="">
@@ -75,185 +82,43 @@
                                     <div class="milenia-entities milenia-entities--style-7">
                                         <div data-isotope-layout="grid" class="milenia-grid milenia-grid--isotope milenia-grid--cols-3">
                                             <div class="milenia-grid-sizer"></div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity--format-image milenia-entity">
-                                                    <div class="milenia-entity-media">
-                                                        <a href="view-things-to-do.php" class="milenia-ln--independent">
-                                                            <img src="images/blog-post-image-19.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 class="milenia-entity-title">
-                                                                        <a href="view-things-to-do.php" class="milenia-color--unchangeable">Mollit Anim Id</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
+                                            <?php
+                                            foreach ($ThingsToDo as $things_to_do) {
+                                                ?>
+                                                <div class="milenia-grid-item">
+                                                    <!--================ Entity ================-->
+                                                    <article class="milenia-entity--format-image milenia-entity">
+                                                        <div class="milenia-entity-media">
+                                                            <a href="view-things-to-do.php?id=<?php echo $things_to_do["id"];?>" class="milenia-ln--independent">
+                                                                <img alt="" src="upload/things-to-do/<?php echo $things_to_do['image_name'] ?>">
+                                                            </a>
+                                                        </div>
+                                                        <div class="milenia-entity-content milenia-aligner">
+                                                            <div class="milenia-aligner-outer">
+                                                                <div class="milenia-aligner-inner">
+                                                                    <header class="milenia-entity-header">
+                                                                        <h2 class="milenia-entity-title">
+                                                                            <a href="view-things-to-do.php?id=<?php echo $things_to_do["id"];?>" class="milenia-color--unchangeable"><?php echo $things_to_do['title']; ?></a>
+                                                                        </h2>
+                                                                    </header>
+                                                                    <div class="milenia-entity-body">
+                                                                        <p><?php echo substr($things_to_do['short_description'], 0, 136) . '...'; ?></p>
+                                                                    </div>
+                                                                    <footer class="milenia-entity-footer">
+                                                                        <a href="view-things-to-do.php?id=<?php echo $things_to_do["id"];?>" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Read More</a>
+                                                                    </footer>
                                                                 </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="view-things-to-do.php" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Read More</a>
-                                                                </footer>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity--format-image milenia-entity">
-                                                    <div class="milenia-entity-media">
-                                                        <a href="view-things-to-do.php" class="milenia-ln--independent">
-                                                            <img src="images/blog-post-image-20.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 class="milenia-entity-title">
-                                                                        <a href="view-things-to-do.php" class="milenia-color--unchangeable">Esse Cillum Dolore</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="view-things-to-do.php" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Read More</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity--format-image milenia-entity">
-                                                    <div class="milenia-entity-media"><a href="view-things-to-do.php" class="milenia-ln--independent">
-                                                            <img src="images/blog-post-image-18.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 class="milenia-entity-title">
-                                                                        <a href="view-things-to-do.php" class="milenia-color--unchangeable">Qui Officia Deserunt</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="view-things-to-do.php" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Read More</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity--format-image milenia-entity">
-                                                    <div class="milenia-entity-media">
-                                                        <a href="view-things-to-do.php" class="milenia-ln--independent">
-                                                            <img src="images/blog-post-image-19.jpg" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 class="milenia-entity-title">
-                                                                        <a href="view-things-to-do.php" class="milenia-color--unchangeable">Mollit Anim Id</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="view-things-to-do.php" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Read More</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity--format-image milenia-entity">
-                                                    <div class="milenia-entity-media">
-                                                        <a href="view-things-to-do.php" class="milenia-ln--independent">
-                                                            <img src="images/blog-post-image-20.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 class="milenia-entity-title">
-                                                                        <a href="view-things-to-do.php" class="milenia-color--unchangeable">Esse Cillum Dolore</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="view-things-to-do.php" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Read More</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity--format-image milenia-entity">
-                                                    <div class="milenia-entity-media">
-                                                        <a href="view-things-to-do.php" class="milenia-ln--independent">
-                                                            <img src="images/blog-post-image-18.jpg" alt=""></a>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <h2 class="milenia-entity-title">
-                                                                        <a href="blog_single_post_v1.html" class="milenia-color--unchangeable">Qui Officia Deserunt</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="view-things-to-do.php" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Read More</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
+                                                    </article>
+                                                    <!--================ End of Entity ================-->
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                     <!--================ End of Entities (Style 7) ================-->
-                                    <!--================ Pagination ================-->
-                                    <footer class="text-center">
-                                        <nav>
-                                            <ul class="milenia-list--unstyled milenia-pagination milenia-pagination--stretched">
-                                                <li class="milenia-pagination--pushed-to-left-md"><a href="#" class="prev page-numbers">Previous</a></li>
-                                                <li><a href="#" class="page-numbers">1</a></li>
-                                                <li><span class="page-numbers current">2</span></li>
-                                                <li><a href="#" class="page-numbers">3</a></li>
-                                                <li class="milenia-pagination--pushed-to-right-md"><a href="#" class="next page-numbers">Next</a></li>
-                                            </ul>
-                                        </nav>
-                                    </footer>
-                                    <!--================ End of Pagination ================-->
                                 </div>
                                 <!--================ End of Content Section ================-->
                             </div>
