@@ -14,6 +14,9 @@
     margin-bottom: 15px;
     color: #000;
 }
+.label-top{
+    margin-top: 0.4rem;
+}
 @media all and (max-width: 768px) {
     .milenia-section-title {
         font-size: 2.25rem;
@@ -39,5 +42,10 @@
     }
     .milenia-entities--style-1 .milenia-entity-title {
         font-size: 1.85rem;
+    }
+    .milenia-info-widget .milenia-grid {
+        max-width: 80%;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
