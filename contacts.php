@@ -71,7 +71,7 @@
                             <main class="col-lg-4">
                                 <h3>Contact Details</h3>
                                 <!--================ Google Map ================-->
-                                <!--                                <div id="gmap-1" data-height="340px" data-locations="[{&quot;lat&quot;: 40.7707307, &quot;lon&quot;: -74.0210859, &quot;icon&quot;: &quot;images/marker-blue.png&quot;, &quot;title&quot;: &quot;Main office&quot;}]" class="milenia-gmap"></div>-->
+                                <div id="gmap-1" data-height="340px" data-locations="[{&quot;lat&quot;: 40.7707307, &quot;lon&quot;: -74.0210859, &quot;icon&quot;: &quot;images/marker-blue.png&quot;, &quot;title&quot;: &quot;Main office&quot;}]" class="milenia-gmap"></div>
                                 <!--================ End of Google Map ================-->
                                 <ul class="milenia-details-list milenia-list--unstyled">
                                     <li><span class="milenia-tc--dark">Address:&nbsp;</span>9863 - 9867 Mill Road, Cambridge, MG09 99HT</li>
