@@ -199,7 +199,7 @@ $sliders = Slider::all();
                                                                                             <a href="view-accommodations.php?id=<?php echo $room["id"]; ?>" class="milenia-color--unchangeable"><?php echo $room['title']; ?></a></h2>
                                                                                     </header>
                                                                                     <div class="milenia-entity-body">
-                                                                                        <p><?php echo substr($room['short_description'], 0, 400) . '...'; ?></p>
+                                                                                        <span class="content"><p><?php echo substr($room['short_description'], 0, 400) . '...'; ?></p></span>
                                                                                     </div>
                                                                                     <footer class="milenia-entity-footer">
                                                                                         <a href="view-accommodations.php?id=<?php echo $room["id"]; ?>" class="milenia-btn">Details</a>
