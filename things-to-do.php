@@ -79,7 +79,7 @@ $ThingsToDo = $THINGS_TO_DO->all();
                                 <!--================ Content Section ================-->
                                 <div class="milenia-section">
                                     <!--================ Entities (Style 7) ================-->
-                                    <div class="milenia-entities milenia-entities--style-7">
+                                    <div class="milenia-entities milenia-entities--style-4">
                                         <div data-isotope-layout="grid" class="milenia-grid milenia-grid--isotope milenia-grid--cols-3">
                                             <div class="milenia-grid-sizer"></div>
                                             <?php
