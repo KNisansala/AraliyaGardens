@@ -116,14 +116,13 @@ $ThingsToDo = $THINGS_TO_DO->all();
                                         $photos = ThingsToDoPhoto::getThingsToDoPhotosById($THINGS_TO_DO->id);
                                         foreach ($photos as $photo) {
                                             ?>
-                                        <img alt="" src="upload/things-to-do/gallery/thumb/<?php echo $photo['image_name']; ?>">
+                                            <img alt="" src="upload/things-to-do/gallery/thumb/<?php echo $photo['image_name']; ?>">
                                             <?php
                                         }
                                         ?>
                                     </div>
                                     <div id="tab-description" tabindex="0" role="tabpanel" aria-labelledby="tab-description-link" class="milenia-tab">
-                                        <p><?php echo $THINGS_TO_DO->description; ?></p>
-                                        <a href="#" data-fancybox-album-src="[{&quot;src&quot;: &quot;images/floor-plan.png&quot;, &quot;opts&quot;: {&quot;caption&quot;: &quot;The floor plan&quot;}}]" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">View Floor Plan</a>
+                                        <span class="content"><p><?php echo $THINGS_TO_DO->description; ?></p></span>
                                     </div>
                                 </div>
                             </main>

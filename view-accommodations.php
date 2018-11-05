@@ -1,8 +1,22 @@
+<?php
+include_once(dirname(__FILE__) . '/class/include.php');
+
+$id = '';
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+
+$ROOM = new Room($id);
+
+$rooms = $ROOM->all();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <!--================ Basic page needs ================-->
-        <title>Araliya Gardens | Classic Balcony Room v1</title>
+        <title>Araliya Gardens | <?php echo $ROOM->title; ?></title>
         <meta charset="UTF-8">
         <meta name="author" content="">
         <meta name="keywords" content="">
@@ -60,11 +74,11 @@
             <!--================ Breadcrumb ================-->
             <div data-bg-image-src="images/breadcrumb-bg-2.jpg" class="milenia-breadcrumb text-center milenia-colorizer--scheme-dark milenia-colorizer--parallax">
                 <div class="container">
-                    <h1 class="milenia-page-title">View Accommodations</h1>
+                    <h1 class="milenia-page-title"><?php echo $ROOM->title; ?></h1>
                     <nav class="milenia-breadcrumb-path">
                         <span><a href="./">Home</a></span>
                         /<span><a href="accommodations.php">Accommodations</a></span>
-                        /<span>View Accommodations</span>
+                        /<span><?php echo $ROOM->title; ?></span>
                     </nav>
                 </div>
             </div>
@@ -74,7 +88,7 @@
                     <header class="milenia-page-header milenia-entity-single milenia-entity--room">
                         <div class="row align-items-center milenia-columns-aligner--edges-lg">
                             <div class="col-lg-9">
-                                <h1>Classic Balcony Room v1</h1>
+                                <h1><?php echo $ROOM->title; ?></h1>
                             </div>
                             <div class="col-lg-3">
                                 <div class="milenia-entity-meta">
@@ -88,27 +102,28 @@
                             <main class="col-lg-9 col-md-8 milenia-entity-single milenia-entity--room">
                                 <div class="milenia-entity-content">
                                     <div id="simple-slideshow-1" class="owl-carousel milenia-simple-slideshow">
-                                        <img src="images/rooms-list-image-22.jpg" alt="">
-                                        <img src="images/rooms-list-image-23.jpg" alt="">
-                                        <img src="images/rooms-list-image-24.jpg" alt="">
-                                        <img src="images/rooms-list-image-25.jpg" alt="">
-                                        <img src="images/rooms-list-image-26.jpg" alt="">
-                                        <img src="images/rooms-list-image-27.jpg" alt="">
-                                        <img src="images/rooms-list-image-28.jpg" alt="">
+                                        <?php
+                                        $photos = RoomPhoto::getRoomPhotosById($ROOM->id);
+                                        foreach ($photos as $photo) {
+                                            ?>
+                                            <img src="upload/room/gallery/<?php echo $photo['image_name']; ?>" alt="">
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                     <div data-sync="#simple-slideshow-1" class="owl-carousel owl-carousel--nav-edges owl-carousel--nav-onhover owl-carousel--nav-small milenia-simple-slideshow-thumbs">
-                                        <img src="images/rooms-list-image-22.jpg" alt="">
-                                        <img src="images/rooms-list-image-23.jpg" alt="">
-                                        <img src="images/rooms-list-image-24.jpg" alt="">
-                                        <img src="images/rooms-list-image-25.jpg" alt="">
-                                        <img src="images/rooms-list-image-26.jpg" alt="">
-                                        <img src="images/rooms-list-image-27.jpg" alt="">
-                                        <img src="images/rooms-list-image-28.jpg" alt="">
+                                        <?php
+                                        $photos = RoomPhoto::getRoomPhotosById($ROOM->id);
+                                        foreach ($photos as $photo) {
+                                            ?>
+                                            <img src="upload/room/gallery/thumb/<?php echo $photo['image_name']; ?>" alt="">
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                     <div id="tab-description" tabindex="0" role="tabpanel" aria-labelledby="tab-description-link" class="milenia-tab">
-                                        <p>Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. 
-                                        Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo.</p>
-                                        <a href="#" data-fancybox-album-src="[{&quot;src&quot;: &quot;images/floor-plan.png&quot;, &quot;opts&quot;: {&quot;caption&quot;: &quot;The floor plan&quot;}}]" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">View Floor Plan</a>
+                                        <span class="content"><p><?php echo $ROOM->description; ?></p></span>
+                                        <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Inquiry Now</a>
                                     </div>
                                 </div>
                             </main>
@@ -124,111 +139,29 @@
                                                 <!--================ Entities ================-->
                                                 <div class="milenia-entities milenia-entities--rooms">
                                                     <!--================ Entity ================-->
-                                                    <article class="milenia-entity">
-                                                        <div class="milenia-entity-media">
-                                                            <a href="rooms_single_room_page_v2.html" class="milenia-ln--independent">
-                                                                <img src="images/rooms-list-image-26-100x78.png" alt=""></a>
-                                                        </div>
-                                                        <div class="milenia-entity-content">
-                                                            <div class="milenia-entity-header">
-                                                                <div class="milenia-entity-meta">
-                                                                    <div>From $199.00/night</div>
+                                                    <?php
+                                                    foreach ($rooms as $key => $room) {
+                                                        if ($key < 10) {
+                                                            ?>
+                                                            <article class="milenia-entity">
+                                                                <div class="milenia-entity-media">
+                                                                    <a href="view-accommodations.php?id=<?php echo $room["id"]; ?>" class="milenia-ln--independent">
+                                                                        <img src="upload/room/<?php echo $room['image_name'] ?>" alt=""></a>
                                                                 </div>
-                                                                <h2 class="milenia-entity-title"><a href="rooms_single_room_page_v2.html" class="milenia-color--unchangeable">Superior Double Room</a></h2>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                    <!--================ End of Entity ================-->
-                                                    <!--================ Entity ================-->
-                                                    <article class="milenia-entity">
-                                                        <div class="milenia-entity-media">
-                                                            <a href="rooms_single_room_page_v2.html" class="milenia-ln--independent">
-                                                                <img src="images/rooms-list-image-27-100x78.png" alt=""></a>
-                                                        </div>
-                                                        <div class="milenia-entity-content">
-                                                            <div class="milenia-entity-header">
-                                                                <div class="milenia-entity-meta">
-                                                                    <div>From $299.00/night</div>
+                                                                <div class="milenia-entity-content">
+                                                                    <div class="milenia-entity-header">
+                                                                        <div class="milenia-entity-meta">
+                                                                            <div>From US$<?php echo $room['price'] ?>/night</div>
+                                                                        </div>
+                                                                        <h2 class="milenia-entity-title">
+                                                                            <a href="view-accommodations.php?id=<?php echo $room["id"]; ?>" class="milenia-color--unchangeable"><?php echo $room['title'] ?></a></h2>
+                                                                    </div>
                                                                 </div>
-                                                                <h2 class="milenia-entity-title">
-                                                                    <a href="rooms_single_room_page_v2.html" class="milenia-color--unchangeable">Superior Balcony Double Room</a>
-                                                                </h2>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                    <!--================ End of Entity ================-->
-                                                    <!--================ Entity ================-->
-                                                    <article class="milenia-entity">
-                                                        <div class="milenia-entity-media">
-                                                            <a href="rooms_single_room_page_v2.html" class="milenia-ln--independent">
-                                                                <img src="images/rooms-list-image-28-100x78.png" alt=""></a>
-                                                        </div>
-                                                        <div class="milenia-entity-content">
-                                                            <div class="milenia-entity-header">
-                                                                <div class="milenia-entity-meta">
-                                                                    <div>From $399.00/night</div>
-                                                                </div>
-                                                                <h2 class="milenia-entity-title">
-                                                                    <a href="rooms_single_room_page_v2.html" class="milenia-color--unchangeable">Delux Double Room</a>
-                                                                </h2>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                    <!--================ End of Entity ================-->
-                                                    <!--================ Entity ================-->
-                                                    <article class="milenia-entity">
-                                                        <div class="milenia-entity-media">
-                                                            <a href="rooms_single_room_page_v2.html" class="milenia-ln--independent">
-                                                                <img src="images/rooms-list-image-26-100x78.png" alt=""></a>
-                                                        </div>
-                                                        <div class="milenia-entity-content">
-                                                            <div class="milenia-entity-header">
-                                                                <div class="milenia-entity-meta">
-                                                                    <div>From $199.00/night</div>
-                                                                </div>
-                                                                <h2 class="milenia-entity-title">
-                                                                    <a href="rooms_single_room_page_v2.html" class="milenia-color--unchangeable">Superior Double Room</a>
-                                                                </h2>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                    <!--================ End of Entity ================-->
-                                                    <!--================ Entity ================-->
-                                                    <article class="milenia-entity">
-                                                        <div class="milenia-entity-media">
-                                                            <a href="rooms_single_room_page_v2.html" class="milenia-ln--independent">
-                                                                <img src="images/rooms-list-image-27-100x78.png" alt=""></a>
-                                                        </div>
-                                                        <div class="milenia-entity-content">
-                                                            <div class="milenia-entity-header">
-                                                                <div class="milenia-entity-meta">
-                                                                    <div>From $299.00/night</div>
-                                                                </div>
-                                                                <h2 class="milenia-entity-title">
-                                                                    <a href="rooms_single_room_page_v2.html" class="milenia-color--unchangeable">Superior Balcony Double Room</a>
-                                                                </h2>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                    <!--================ End of Entity ================-->
-                                                    <!--================ Entity ================-->
-                                                    <article class="milenia-entity">
-                                                        <div class="milenia-entity-media">
-                                                            <a href="rooms_single_room_page_v2.html" class="milenia-ln--independent">
-                                                                <img src="images/rooms-list-image-28-100x78.png" alt=""></a>
-                                                        </div>
-                                                        <div class="milenia-entity-content">
-                                                            <div class="milenia-entity-header">
-                                                                <div class="milenia-entity-meta">
-                                                                    <div>From $399.00/night</div>
-                                                                </div>
-                                                                <h2 class="milenia-entity-title">
-                                                                    <a href="rooms_single_room_page_v2.html" class="milenia-color--unchangeable">Delux Double Room</a>
-                                                                </h2>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                    <!--================ End of Entity ================-->
+                                                            </article>
+                                                            <?php
+                                                        }
+                                                    }
+                                                    ?>
                                                 </div>
                                                 <!--================ End of Entities ================-->
                                             </div>

@@ -48,4 +48,7 @@
         margin-left: auto !important;
         margin-right: auto !important;
     }
+    .milenia-widget .milenia-entities--rooms .milenia-entity-title:not(:only-child) {
+        margin-bottom: 0rem;
+    }
 }
