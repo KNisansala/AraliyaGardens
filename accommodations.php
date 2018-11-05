@@ -1,7 +1,7 @@
 <?php
 include_once(dirname(__FILE__) . '/class/include.php');
 
-$ROOM = new Room(Null);
+$ROOM = new Room(NULL);
 $rooms = $ROOM->all();
 ?>
 
@@ -95,14 +95,15 @@ $rooms = $ROOM->all();
                                                 ?>
                                                 <div class="milenia-grid-item">
                                                     <!--================ Entity ================-->
-                                                    
+
                                                     <article class="milenia-entity">
                                                         <div class="milenia-entity-media">
                                                             <div class="owl-carousel owl-carousel--vadaptive milenia-simple-slideshow">
                                                                 <?php
-                                                                foreach ($rooms as $room) {
+                                                                $photos = RoomPhoto::getRoomPhotosById($room['id']);
+                                                                foreach ($photos as $photo) {
                                                                     ?>
-                                                                    <div data-bg-image-src="upload/room/<?php echo $room['image_name'] ?>" class="milenia-entity-slide"></div>
+                                                                    <div data-bg-image-src="upload/room/gallery/<?php echo $photo['image_name']; ?>" class="milenia-entity-slide"></div>
                                                                     <?php
                                                                 }
                                                                 ?>
@@ -135,40 +136,6 @@ $rooms = $ROOM->all();
                                                 <?php
                                             }
                                             ?>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity">
-                                                    <div class="milenia-entity-media">
-                                                        <div class="owl-carousel owl-carousel--vadaptive milenia-simple-slideshow">
-                                                            <div data-bg-image-src="images/rooms-list-image-12.jpg" class="milenia-entity-slide"></div>
-                                                            <div data-bg-image-src="images/rooms-list-image-10.jpg" class="milenia-entity-slide"></div>
-                                                            <div data-bg-image-src="images/rooms-list-image-11.jpg" class="milenia-entity-slide"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <header class="milenia-entity-header">
-                                                                    <div class="milenia-entity-meta">
-                                                                        <div>from  <strong class='milenia-entity-price'>$199.00</strong>/night</div>
-                                                                    </div>
-                                                                    <h2 class="milenia-entity-title">
-                                                                        <a href="view-accommodations.php" class="milenia-color--unchangeable">Superior Double Room</a>
-                                                                    </h2>
-                                                                </header>
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
-                                                                </div>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <a href="view-accommodations.php" class="milenia-btn">Details</a>
-                                                                    <a href="view-accommodations.php" class="milenia-btn milenia-btn--scheme-primary">Book Now</a>
-                                                                </footer>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
                                         </div>
                                     </div>
                                     <!--================ End of Entities (Style 15) ================-->
@@ -333,17 +300,6 @@ $rooms = $ROOM->all();
                                                         <!--================ Banner ================-->
                                                         <article class="milenia-banner">
                                                             <div data-bg-image-src="images/banner-image-14.jpg" class="milenia-banner-media"><img src="images/banner-image-14.jpg" alt=""></div>
-                                                            <div class="milenia-banner-content milenia-aligner">
-                                                                <div class="milenia-aligner-outer">
-                                                                    <div class="milenia-aligner-inner">
-                                                                        <div class="milenia-banner-text">
-                                                                            <h2 class="milenia-banner-title milenia-color--unchangeable">Offers &amp; Packages</h2>
-                                                                            <p>Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar.</p>
-                                                                        </div>
-                                                                        <div class="milenia-banner-actions"><a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-inherit">Explore More</a></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                                         </article>
                                                         <!--================ End of Banner ================-->
                                                     </div>
@@ -353,60 +309,6 @@ $rooms = $ROOM->all();
                                         </div>
                                     </div>
                                 </div>
-                                <!--================ End of Widget ================-->
-                                <!--================ Widget ================-->
-                                <section class="milenia-grid-item milenia-widget">
-                                    <div class="milenia-grid-item-inner">
-                                        <div class="milenia-grid-item-content">
-                                            <h5 class="milenia-widget-title">Other Accommodations</h5>
-                                            <!--================ Entities ================-->
-                                            <div class="milenia-entities milenia-entities--rooms">
-                                                <!--================ Entity ================-->
-                                                
-                                                <article class="milenia-entity">
-                                                    <div class="milenia-entity-media"><a href="rooms_single_room_page_v2.html" class="milenia-ln--independent"><img src="images/rooms-list-image-26-100x78.png" alt=""></a></div>
-                                                    <div class="milenia-entity-content">
-                                                        <div class="milenia-entity-header">
-                                                            <div class="milenia-entity-meta">
-                                                                <div>From $199.00/night</div>
-                                                            </div>
-                                                            <h2 class="milenia-entity-title"><a href="rooms_single_room_page_v2.html" class="milenia-color--unchangeable">Superior Double Room</a></h2>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                
-                                                <!--================ End of Entity ================-->
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity">
-                                                    <div class="milenia-entity-media"><a href="rooms_single_room_page_v2.html" class="milenia-ln--independent"><img src="images/rooms-list-image-27-100x78.png" alt=""></a></div>
-                                                    <div class="milenia-entity-content">
-                                                        <div class="milenia-entity-header">
-                                                            <div class="milenia-entity-meta">
-                                                                <div>From $299.00/night</div>
-                                                            </div>
-                                                            <h2 class="milenia-entity-title"><a href="rooms_single_room_page_v2.html" class="milenia-color--unchangeable">Superior Balcony Double Room</a></h2>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity">
-                                                    <div class="milenia-entity-media"><a href="rooms_single_room_page_v2.html" class="milenia-ln--independent"><img src="images/rooms-list-image-28-100x78.png" alt=""></a></div>
-                                                    <div class="milenia-entity-content">
-                                                        <div class="milenia-entity-header">
-                                                            <div class="milenia-entity-meta">
-                                                                <div>From $399.00/night</div>
-                                                            </div>
-                                                            <h2 class="milenia-entity-title"><a href="rooms_single_room_page_v2.html" class="milenia-color--unchangeable">Delux Double Room</a></h2>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <!--================ End of Entities ================-->
-                                        </div>
-                                    </div>
-                                </section>
                                 <!--================ End of Widget ================-->
                             </div>
                         </aside>
