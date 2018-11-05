@@ -7937,7 +7937,7 @@ Headers:    'Abril Fatface' sans-serif;
             .milenia-entities--style-9 .milenia-entity {
                 font-size: 0.875rem;
                 line-height: 1.75;
-                text-align: initial;
+                text-align: center;
                 color: #858585;
             }
 
@@ -7946,7 +7946,7 @@ Headers:    'Abril Fatface' sans-serif;
             .milenia-entities--style-9 .milenia-entity-content {
                 position: relative;
                 z-index: 3;
-                background-color: #fff;
+                background-color: #f8f8f8;
             }
 
             .milenia-entities--style-4 .milenia-entity-header,
@@ -10327,7 +10327,7 @@ Headers:    'Abril Fatface' sans-serif;
         }
 
         .milenia-section-title:not(:last-child) {
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
 
         .milenia-section-title + .milenia-section-description {
@@ -10335,7 +10335,7 @@ Headers:    'Abril Fatface' sans-serif;
         }
 
         .milenia-section-title--style-2:not(:last-child) {
-            margin-bottom: 1.8rem;
+            margin-bottom: 0.8rem;
         }
 
         .milenia-section-title--style-3,
