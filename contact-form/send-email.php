@@ -5,10 +5,8 @@
 $comany_name = "Araliya Gardens";
 $website_name = "www.araliyagardens.com";
 $comConNumber = "+94 77 548 1031";
-//$comEmail = "info@hikkabeachtours.com";
-//$from = 'info@hikkabeachtours.com';
-$comEmail = "amalidinushika93@gmail.com";
-$from = 'amalidinushika93@gmail.com';
+$comEmail = "info@galle.website";
+$from = 'info@galle.website';
 
 
 

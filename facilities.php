@@ -89,15 +89,14 @@ $Facilities = $FACILITIES->all();
                                                     <!--================ Entity ================-->
                                                     <article class="milenia-entity milenia-entity--format-image">
                                                         <div class="milenia-entity-media">
-                                                            <a href="#" aria-labelledby="entity-heading-0" class="milenia-ln--independent" style="background-position: 0% 387.983px;">
-                                                                <img src="upload/facilities/<?php echo $facilities['image_name'] ?>" alt=""></a>
+                                                                <img src="upload/facilities/<?php echo $facilities['image_name'] ?>" alt="">
                                                         </div>
                                                         <div class="milenia-entity-content milenia-aligner">
                                                             <div class="milenia-aligner-outer">
                                                                 <div class="milenia-aligner-inner">
                                                                     <header class="milenia-entity-header">
                                                                         <h2 id="entity-heading-0" class="milenia-entity-title">
-                                                                            <a href="#" class="milenia-color--unchangeable" style="background-position: 0% 47px;"><?php echo $facilities['title'] ?></a>
+                                                                            <div class="milenia-color--unchangeable" style="background-position: 0% 47px;"><?php echo $facilities['title'] ?></div>
                                                                         </h2>
                                                                     </header>
                                                                     <div class="milenia-entity-body">

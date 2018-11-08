@@ -139,7 +139,7 @@
                                             <span id="capspan" ></span>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="col-md-3">
+                                            <div class="col-xs-3">
                                                 <label></label>
                                                 <span><?php include("./contact-form/captchacode-widget.php"); ?></span>
                                             </div>
