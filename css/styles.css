@@ -17,6 +17,33 @@
 .label-top{
     margin-top: 0.4rem;
 }
+.review-top{
+    margin-top: 60px;
+}
+/*------- reviews ------*/
+.milenia-rating {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    white-space: nowrap;
+    color: #febd11;
+}
+.milenia-entities--style-6 .milenia-entity::after {
+    border-color: #c19b76b3;
+}
+.panel-white2 {
+    border: 1px solid #dddddd;
+    margin-right: 0px;
+    padding: 38px;
+}
+.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
 @media all and (max-width: 768px) {
     .milenia-section-title {
         font-size: 2.25rem;
@@ -32,6 +59,11 @@
     }
     h1 {
         font-size: 2.25rem;
+    }
+    .refresh-img {
+        width: 23px;
+        height: 30px;
+        margin: -25px 0px 18px 130px;
     }
 }
 @media (min-width: 1199px) and (max-width: 1400px) {
@@ -50,5 +82,17 @@
     }
     .milenia-widget .milenia-entities--rooms .milenia-entity-title:not(:only-child) {
         margin-bottom: 0rem;
+    }
+}
+@media (min-width:1300px) and (max-width:1399px){
+    .milenia-tabbed-carousel-thumb {
+        width: 235px;
+    }
+    .milenia-tabbed-carousel-thumb-image {
+        width: 125px;
+        height: 100px;
+    }
+    .milenia-tabbed-carousel-thumb-caption {
+        padding: 23px 20px 23px 15px;
     }
 }

@@ -30,6 +30,7 @@
         <!--================ Theme CSS ================-->
         <link rel="stylesheet" href="css/style.css">
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <link href="feedback-form/style.css" rel="stylesheet" type="text/css"/>
         <!--================ Vendor JS ================-->
     </head>
     <body class="milenia-body--scheme-lightbrown">
@@ -73,151 +74,154 @@
                 </div>
             </div>
             <!--================ End of Breadcrumb ================-->
-            
+
             <div class="milenia-content milenia-content--no-pb ">
                 <div class="container">
-                    
+
                     <!--================ Content Section ================-->
                     <section class="milenia-section milenia-section--py-medium">
                         <div class="row">
                             <div class="col-lg-12">
-<!--                                <div class="milenia-section milenia-section--py-medium">
-                                    ================ Estimate ================
-                                    <div class="milenia-estimate milenia-estimate--horizontal-sm">
-                                        <div class="milenia-estimate-mark milenia-aligner milenia-aligner--valign-middle">
-                                            <div class="milenia-aligner-outer">
-                                                <div class="milenia-aligner-inner">7.0<em class="milenia-estimate-mark-text">Good</em></div>
+                                <div class="milenia-section milenia-section--py-medium">
+                                    <div class="panel panel-white2 post panel-shadow">
+                                        <h3>Add Your Comment</h3>
+                                        <div id="guestcomment">
+                                            <div class="milenia-contact-form milenia-form--fields-white">
+                                                <div class="form-group">
+                                                    <div class="form-col">
+                                                        <label>Your Name *</label>
+                                                        <input type="text" name="txtFullName" id="txtFullName" class="form-control input-validater">
+                                                        <span id="spanFullName" ></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="form-col">
+                                                        <label>Your Country *</label>
+                                                        <input type="text" name="txtCountry"  id="txtCountry" class="form-control input-validater">
+                                                        <span id="spanCountry" ></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="form-col">
+                                                        <label>Profile Picture *</label>
+                                                        <input type="file" id="txtprofileimg" name="txtprofileimg" class="form-control input-validater">
+                                                        <span id="spanprofileimg" ></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="form-col">
+                                                        <label>Comment *</label>
+                                                        <textarea id="txtMessage" name="txtMessage" rows="4" class="form-control"></textarea>
+                                                        <span id="spanMessage" ></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="form-col-6">
+                                                        <label for="comment" id="form-label" class="label-top">Security Code:<span class="red">*</span></label>
+                                                        <input type="text" name="captchacode" id="captchacode" class="input-validater" placeholder="Security code >> ">
+                                                        <span id="capspan" ></span>
+                                                    </div>
+                                                    <div class="form-col-6">
+                                                        <label></label>
+                                                        <span><?php include("./feedback-form/captchacode-widget.php"); ?></span>
+                                                    </div> 
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="form-col">
+                                                        <div class="div-check" >
+                                                            <img src="feedback-form/img/checking.gif" id="checking"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="form-col">
+                                                        <button type="submit" name="btnSubmit" id="btnSubmit" class="milenia-btn">Submit Review</button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="milenia-estimate-bars">
-                                            ================ Progress Bars ================
-                                            <div class="milenia-progress-bars milenia-progress-bars--style-2">
-                                                <div class="milenia-progress-bars-item"><strong id="progress-bar-title-1" data-value="7.5" class="milenia-progress-bar-title">Accommodation</strong>
-                                                    <div role="progressbar" aria-valuenow="7.5" aria-valuemin="0" aria-valuemax="10" aria-labelledby="progress-bar-title-1" class="milenia-progress-bar">
-                                                        <div style="width: 75%" class="milenia-progress-bar-indicator"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="milenia-progress-bars-item"><strong id="progress-bar-title-2" data-value="5.5" class="milenia-progress-bar-title">Location</strong>
-                                                    <div role="progressbar" aria-valuenow="5.5" aria-valuemin="0" aria-valuemax="10" aria-labelledby="progress-bar-title-2" class="milenia-progress-bar">
-                                                        <div style="width: 55%" class="milenia-progress-bar-indicator"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="milenia-progress-bars-item"><strong id="progress-bar-title-3" data-value="9.0" class="milenia-progress-bar-title">Meals</strong>
-                                                    <div role="progressbar" aria-valuenow="9.0" aria-valuemin="0" aria-valuemax="10" aria-labelledby="progress-bar-title-3" class="milenia-progress-bar">
-                                                        <div style="width: 90%" class="milenia-progress-bar-indicator"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="milenia-progress-bars-item"><strong id="progress-bar-title-4" data-value="6.0" class="milenia-progress-bar-title">Facilities</strong>
-                                                    <div role="progressbar" aria-valuenow="6.0" aria-valuemin="0" aria-valuemax="10" aria-labelledby="progress-bar-title-4" class="milenia-progress-bar">
-                                                        <div style="width: 60%" class="milenia-progress-bar-indicator"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            ================ End of Progress Bars ================
                                         </div>
                                     </div>
-                                    ================ End of Estimate ================
-                                </div>-->
-                                <div class="milenia-section milenia-section--py-medium">
-                                    <h5>Add Your Comment</h5>
-                                    <form name="review">
-                                        <div class="form-group">
-                                            <div class="form-col">
-                                                <label for="review_name">Your Name *</label>
-                                                <input type="text" id="review_name" name="review_name" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="form-col">
-                                                <label for="review_country">Your Country *</label>
-                                                <input type="text" id="review_email" name="review_country" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="form-col">
-                                                <label for="review_image">Profile Picture *</label>
-                                                <input type="file" id="review_email" name="review_country" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="form-col">
-                                                <label>Rating</label>
-                                                <div class="milenia-rating-field">
-                                                    <div data-estimate="4" class="milenia-rating milenia-rating--independent"></div>
-                                                    <input type="hidden" name="review_rating" value="4">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="form-col">
-                                                <label for="review_comment">Comment *</label>
-                                                <textarea id="review_comment" name="review_comment" rows="4" class="form-control"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="form-col">
-                                                <button type="submit" class="milenia-btn">Submit Review</button>
-                                            </div>
-                                        </div>
-                                    </form>
                                 </div>
-                                <div class="milenia-section milenia-section--py-medium">
-                                    <h5>All Reviews</h5>
-                                    <ol class="comments-list">
-                                        <li class="comment">
-                                            <div class="comment-body">
-                                                <div class="comment-author-avatar"><a href="#" class="milenia-color--unchangeable"><img src="images/author-image-4.png" alt="Camala Haddon"></a></div>
-                                                <div class="comment-author-info">
-                                                    <cite class="fn milenia-color--black">Camala Haddon</cite>
-                                                    <div class="comment-meta row milenia-columns-aligner--edges-md align-items-center">
-                                                        <div class="col-md-8">
-                                                            <time datetime="2018-10-17">October 17, 2018 at 2:41 pm</time>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div data-estimate="4" class="milenia-rating milenia-rating--independent"></div>
-                                                        </div>
-                                                    </div>
-                                                    <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="comment">
-                                            <div class="comment-body">
-                                                <div class="comment-author-avatar"><a href="#" class="milenia-color--unchangeable"><img src="images/author-image-5.png" alt="Bradley Grosh"></a></div>
-                                                <div class="comment-author-info">
-                                                    <cite class="fn milenia-color--black">Bradley Grosh</cite>
-                                                    <div class="comment-meta row milenia-columns-aligner--edges-md align-items-center">
-                                                        <div class="col-md-8">
-                                                            <time datetime="2018-10-17">October 17, 2018 at 2:41 pm</time>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div data-estimate="5" class="milenia-rating milenia-rating--independent"></div>
-                                                        </div>
-                                                    </div>
-                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="comment">
-                                            <div class="comment-body">
-                                                <div class="comment-author-avatar"><a href="#" class="milenia-color--unchangeable"><img src="images/author-image-2.png" alt="Bradley Grosh"></a></div>
-                                                <div class="comment-author-info">
-                                                    <cite class="fn milenia-color--black">Ryan Smith</cite>
-                                                    <div class="comment-meta row milenia-columns-aligner--edges-md align-items-center">
-                                                        <div class="col-md-8">
-                                                            <time datetime="2018-10-17">October 17, 2018 at 2:41 pm</time>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div data-estimate="3" class="milenia-rating milenia-rating--independent"></div>
+                                <div class="milenia-section milenia-section--py-medium review-top">
+                                    <h3>All Reviews</h3>
+                                    <div class="milenia-entities milenia-entities--style-6">
+                                        <div class="milenia-grid milenia-grid--cols-1">
+                                            <div class="milenia-grid-item">
+                                                <!--================ Entity ================-->
+                                                <article class="milenia-entity milenia-entity--format-image">
+                                                    <div class="milenia-entity-content milenia-aligner">
+                                                        <div class="milenia-aligner-outer">
+                                                            <div class="milenia-aligner-inner">
+                                                                <div class="milenia-entity-body">
+                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
+                                                                        Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
+                                                                        Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.</p>
+                                                                </div>
+                                                                <header class="milenia-entity-header">
+
+                                                                    <div class="comment-author-info">
+                                                                        <cite class="fn milenia-color--black">Camala Haddon</cite>
+                                                                    </div>
+
+                                                                    <div class="milenia-entity-meta">
+                                                                        <div>United Kingdom</div>
+                                                                    </div>
+
+                                                                </header>
+                                                                <footer class="milenia-entity-footer">
+                                                                    <div class="comment-author-avatar">
+                                                                        <a href="#" class="milenia-color--unchangeable">
+                                                                            <img src="images/author-image-4.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </footer>
+                                                                <div data-estimate="5" class="milenia-rating milenia-text-color--primary"></div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <p>ursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p>
-                                                </div>
+                                                </article>
+                                                <!--================ End of Entity ================-->
                                             </div>
-                                        </li>
-                                    </ol>
+                                            <div class="milenia-grid-item">
+                                                <!--================ Entity ================-->
+                                                <article class="milenia-entity milenia-entity--format-image">
+                                                    <div class="milenia-entity-content milenia-aligner">
+                                                        <div class="milenia-aligner-outer">
+                                                            <div class="milenia-aligner-inner">
+                                                                <div class="milenia-entity-body">
+                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
+                                                                        Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
+                                                                        Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.</p>
+                                                                </div>
+                                                                <header class="milenia-entity-header">
+
+                                                                    <div class="comment-author-info">
+                                                                        <cite class="fn milenia-color--black">Bradley Grosh</cite>
+                                                                    </div>
+
+                                                                    <div class="milenia-entity-meta">
+                                                                        <div>United Kingdom</div>
+                                                                    </div>
+
+                                                                </header>
+                                                                <footer class="milenia-entity-footer">
+                                                                    <div class="comment-author-avatar">
+                                                                        <a href="#" class="milenia-color--unchangeable">
+                                                                            <img src="images/author-image-5.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </footer>
+                                                                <div data-estimate="5" class="milenia-rating milenia-text-color--primary"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!--================ End of Entity ================-->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </section>
@@ -225,7 +229,7 @@
                     <!--================ Content Section ================-->
                     <div class="milenia-section milenia-section--stretched-content-no-px milenia-section--no-py">
                         <!--================ Entities (Style 2) ================-->
-                        
+
                         <!--================ End of Entities (Style 2) ================-->
                     </div>
                     <!--================ End of Content Section ================-->
@@ -269,5 +273,6 @@
         <script src="js/modules/milenia.tabbed-grid.min.js"></script>
         <script src="js/modules/milenia.sticky-header-section.min.js"></script>
         <script src="js/milenia.app.js"></script>
+        <script src="js/create-guest-comment.js" type="text/javascript"></script>
     </body>
 </html>
