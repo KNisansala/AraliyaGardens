@@ -1599,7 +1599,7 @@ Headers:    'Abril Fatface' sans-serif;
         .milenia-content.milenia-content--no-py,
         .milenia-content.milenia-content--no-pb,
         .milenia-section.milenia-section--no-py {
-            padding-bottom: 0;
+            padding-bottom: 5.9rem;
         }
 
         .milenia-section--parallax {
@@ -1666,7 +1666,7 @@ Headers:    'Abril Fatface' sans-serif;
 
         .milenia-section--py-medium,
         .milenia-section--py-large {
-            padding-bottom: 4.375rem;
+            padding-bottom: 0.375rem;
         }
 
         .milenia-section--py-huge {
@@ -1707,7 +1707,7 @@ Headers:    'Abril Fatface' sans-serif;
 
         body.milenia-body--border-layout .milenia-content:not(.milenia-content--no-pb):not(.milenia-content--no-py),
         body.milenia-body--border-layout .milenia-section:not(.milenia-section--no-py).milenia-section--py-xsmall:last-child {
-            padding-bottom: 1.5625rem;
+            padding-bottom: 0rem;
         }
 
         body.milenia-body--border-layout .milenia-section:not(:last-child) {
@@ -3890,8 +3890,6 @@ Headers:    'Abril Fatface' sans-serif;
         }
 
         .comment-author-avatar {
-            float: left;
-            margin-right: 1.25rem;
             position: relative;
             z-index: 2;
         }
@@ -3913,7 +3911,8 @@ Headers:    'Abril Fatface' sans-serif;
         }
 
         .comment-author-info {
-            padding-left: 6.125rem;
+            text-align: center;
+            font-size: 25px;
         }
 
         .comment-meta {
@@ -5177,14 +5176,14 @@ Headers:    'Abril Fatface' sans-serif;
         }
 
         .milenia-btn:not(.milenia-btn--link):not([class*="milenia-btn--scheme-"]), .milenia-btn:not(.milenia-btn--link):not([class*="milenia-btn--scheme-"]).milenia-btn--reverse:hover {
-            border-color: #858585;
-            background-color: #858585;
+            border-color: #c19b76;
+            background-color: #c19b76;
             color: #fff;
         }
 
         .milenia-btn:not(.milenia-btn--link):not([class*="milenia-btn--scheme-"]):hover, .milenia-btn:not(.milenia-btn--link):not([class*="milenia-btn--scheme-"]):focus, .milenia-btn:not(.milenia-btn--link):not([class*="milenia-btn--scheme-"]).milenia-btn--reverse {
             background-color: #fff;
-            color: #858585;
+            color: #c19b76;
         }
 
         .milenia-btn:not(.milenia-btn--link):not(.milenia-btn--big):not(.milenia-btn--huge):not(.milenia-btn--xxl) {
