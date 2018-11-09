@@ -7,6 +7,9 @@ $rooms = $ROOM->all();
 $COMMENT = new Comments(Null);
 $comments = $COMMENT->all();
 
+$PHOTO_ALBUM = new PhotoAlbum(Null);
+$photo_albums = $PHOTO_ALBUM->all();
+
 $sliders = Slider::all();
 ?>
 
@@ -158,7 +161,7 @@ $sliders = Slider::all();
                                     <!--================ Tabs ================-->
                                     <div class="milenia-tabs milenia-tabs--unstyled">
                                         <!--================ Tabs Navigation ================-->
-                                        
+
                                         <!--================ End of Tabs Navigation ================-->
                                         <!--================ Tabs Container ================-->
                                         <div class="milenia-tabs-container">
@@ -286,7 +289,26 @@ $sliders = Slider::all();
                                 <div class="milenia-section milenia-section--no-py milenia-section--stretched-content-no-px">
                                     <!--================ Gallery ================-->
                                     <div class="milenia-instafeed">
-                                        <div id="instafeed" data-get="user" data-user="customer" data-limit="6" class="milenia-grid milenia-grid--no-gutters milenia-grid--cols-6"></div>
+                                        <div id="" data-get="user" data-user="customer" data-limit="6" class="milenia-grid milenia-grid--no-gutters milenia-grid--cols-6">
+                                            <div class="milenia-grid-sizer"></div>
+                                            <?php
+                                            foreach ($photo_albums as $key => $photo_album) {
+                                                if ($key < 6) {
+                                                    ?>
+                                                    <div class="milenia-grid-item milenia-category-rooms">
+                                                        <!--================ Gallery Item ================-->
+                                                        <figure class="milenia-gallery-item milenia-gallery-item--with-thumb">
+                                                            <a href="upload/photo-album/<?php echo $photo_album['image_name'] ?>" data-fancybox="gallery" data-caption="Nemo Enim Ipsam" class="milenia-ln--independent milenia-gallery-item-link">
+                                                                <img src="upload/photo-album/<?php echo $photo_album['image_name'] ?>" alt="">
+                                                            </a>
+                                                        </figure>
+                                                        <!--================ End of Gallery Item ================-->
+                                                    </div>
+                                                    <?php
+                                                }
+                                            }
+                                            ?>
+                                        </div>
                                     </div>
                                     <!--================ End of Gallery ================-->
                                 </div>

@@ -54,8 +54,8 @@ $(document).ready(function () {
             data: formData,
             async: false,
             dataType: 'json',
-            success: function (message)
-            {
+            success: function (message){
+                if (message.success) {
                 swal({
                     title: "Alert",
                     text: "Your Comment Has Been Submit Successfully .",
@@ -64,7 +64,8 @@ $(document).ready(function () {
                     showConfirmButton: false
                 });
 
-            },
+            }
+        },
             cache: false,
             contentType: false,
             processData: false

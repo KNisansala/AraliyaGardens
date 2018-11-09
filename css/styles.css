@@ -44,6 +44,9 @@
     border: 1px solid transparent;
     border-radius: 4px;
 }
+.lb-top{
+    margin-top: 1rem;
+}
 @media all and (max-width: 768px) {
     .milenia-section-title {
         font-size: 2.25rem;
@@ -59,11 +62,16 @@
     }
     h1 {
         font-size: 2.25rem;
+        text-align: center;
     }
     .refresh-img {
         width: 23px;
         height: 30px;
         margin: -25px 0px 18px 130px;
+    }
+    h3 {
+        font-size: 1.75rem;
+        text-align: center;
     }
 }
 @media (min-width: 1199px) and (max-width: 1400px) {

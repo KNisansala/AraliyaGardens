@@ -1599,7 +1599,7 @@ Headers:    'Abril Fatface' sans-serif;
         .milenia-content.milenia-content--no-py,
         .milenia-content.milenia-content--no-pb,
         .milenia-section.milenia-section--no-py {
-            padding-bottom: 5.9rem;
+            padding-bottom: 0rem;
         }
 
         .milenia-section--parallax {
@@ -5176,14 +5176,14 @@ Headers:    'Abril Fatface' sans-serif;
         }
 
         .milenia-btn:not(.milenia-btn--link):not([class*="milenia-btn--scheme-"]), .milenia-btn:not(.milenia-btn--link):not([class*="milenia-btn--scheme-"]).milenia-btn--reverse:hover {
-            border-color: #c19b76;
-            background-color: #c19b76;
+            border-color: #858585;
+            background-color: #858585;
             color: #fff;
         }
 
         .milenia-btn:not(.milenia-btn--link):not([class*="milenia-btn--scheme-"]):hover, .milenia-btn:not(.milenia-btn--link):not([class*="milenia-btn--scheme-"]):focus, .milenia-btn:not(.milenia-btn--link):not([class*="milenia-btn--scheme-"]).milenia-btn--reverse {
             background-color: #fff;
-            color: #c19b76;
+            color: #858585;
         }
 
         .milenia-btn:not(.milenia-btn--link):not(.milenia-btn--big):not(.milenia-btn--huge):not(.milenia-btn--xxl) {
@@ -17137,7 +17137,7 @@ Headers:    'Abril Fatface' sans-serif;
                  -ms-flex: initial;
                      flex: initial;
              min-height: auto;
-             height: 21.875rem;
+             height: 18.875rem;
          }
          .milenia-has-sidebar .milenia-entities--style-15 .milenia-entity-media + .milenia-entity-content {
              max-width: 100%;

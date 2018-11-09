@@ -3,7 +3,7 @@ $captchacode = rand();
 
 ?>               
 
-<img src="feedback-form/Generate_Captcha_Code.php?rand=<?php echo $captchacode; ?>" id='captchaimg'  style=" margin-top: 35px; margin-left: -10px;">  
+<img src="feedback-form/Generate_Captcha_Code.php?rand=<?php echo $captchacode; ?>" id='captchaimg'  style=" margin-top: 48px;">  
 
 <a href='javascript: refreshCaptcha();' class="contact-detail">
     <div class="refreshbox">
