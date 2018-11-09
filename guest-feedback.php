@@ -1,3 +1,9 @@
+<?php
+include_once(dirname(__FILE__) . '/class/include.php');
+
+$COMMENT = new Comments(Null);
+$comments = $COMMENT->all();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -79,7 +85,7 @@
                 <div class="container">
 
                     <!--================ Content Section ================-->
-                    <section class="milenia-section milenia-section--py-medium">
+                    <section class="milenia-section">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="milenia-section milenia-section--py-medium">
@@ -97,7 +103,7 @@
                                                 <div class="form-group">
                                                     <div class="form-col">
                                                         <label>Your Country *</label>
-                                                        <input type="text" name="txtCountry"  id="txtCountry" class="form-control input-validater">
+                                                        <input type="text" name="txtCountry" id="txtCountry" class="form-control input-validater">
                                                         <span id="spanCountry" ></span>
                                                     </div>
                                                 </div>
@@ -111,31 +117,24 @@
                                                 <div class="form-group">
                                                     <div class="form-col">
                                                         <label>Comment *</label>
-                                                        <textarea id="txtMessage" name="txtMessage" rows="4" class="form-control"></textarea>
+                                                        <textarea id="txtMessage" name="txtMessage" rows="4" class="form-control input-validater"></textarea>
                                                         <span id="spanMessage" ></span>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <div class="form-col-6">
-                                                        <label for="comment" id="form-label" class="label-top">Security Code:<span class="red">*</span></label>
+                                                    <div class="col-md-6">
+                                                        <label for="comment" id="form-label" class="lb-top">Security Code:<span class="red">*</span></label>
                                                         <input type="text" name="captchacode" id="captchacode" class="input-validater" placeholder="Security code >> ">
                                                         <span id="capspan" ></span>
                                                     </div>
-                                                    <div class="form-col-6">
+                                                    <div class="col-md-6">
                                                         <label></label>
                                                         <span><?php include("./feedback-form/captchacode-widget.php"); ?></span>
                                                     </div> 
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="form-col">
-                                                        <div class="div-check" >
-                                                            <img src="feedback-form/img/checking.gif" id="checking"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="form-col">
-                                                        <button type="submit" name="btnSubmit" id="btnSubmit" class="milenia-btn">Submit Review</button>
+                                                        <button type="submit" name="btnSubmit" id="btnSubmit" class="milenia-btn milenia-btn--scheme-primary">Submit Review</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -146,78 +145,46 @@
                                     <h3>All Reviews</h3>
                                     <div class="milenia-entities milenia-entities--style-6">
                                         <div class="milenia-grid milenia-grid--cols-1">
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity milenia-entity--format-image">
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
-                                                                        Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
-                                                                        Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.</p>
+                                            <?php
+                                            foreach ($comments as $comment) {
+                                                ?>
+                                                <div class="milenia-grid-item">
+                                                    <!--================ Entity ================-->
+                                                    <article class="milenia-entity milenia-entity--format-image">
+                                                        <div class="milenia-entity-content milenia-aligner panel panel-white2 post panel-shadow">
+                                                            <div class="milenia-aligner-outer">
+                                                                <div class="milenia-aligner-inner">
+                                                                    <div class="milenia-entity-body">
+                                                                        <p><?php echo $comment['comment']; ?></p>
+                                                                    </div>
+                                                                    <header class="milenia-entity-header">
+
+                                                                        <div class="comment-author-info">
+                                                                            <cite class="fn milenia-color--black"><?php echo $comment['name']; ?></cite>
+                                                                        </div>
+
+                                                                        <div class="milenia-entity-meta">
+                                                                            <div><?php echo $comment['title']; ?></div>
+                                                                        </div>
+
+                                                                    </header>
+                                                                    <footer class="milenia-entity-footer">
+                                                                        <div class="comment-author-avatar">
+                                                                            <a href="#" class="milenia-color--unchangeable">
+                                                                                <img src="upload/comments/<?php echo $comment['image_name'] ?>" class="milenia-author-photo">
+                                                                            </a>
+                                                                        </div>
+                                                                    </footer>
+                                                                    <div data-estimate="5" class="milenia-rating milenia-text-color--primary"></div>
                                                                 </div>
-                                                                <header class="milenia-entity-header">
-
-                                                                    <div class="comment-author-info">
-                                                                        <cite class="fn milenia-color--black">Camala Haddon</cite>
-                                                                    </div>
-
-                                                                    <div class="milenia-entity-meta">
-                                                                        <div>United Kingdom</div>
-                                                                    </div>
-
-                                                                </header>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <div class="comment-author-avatar">
-                                                                        <a href="#" class="milenia-color--unchangeable">
-                                                                            <img src="images/author-image-4.png" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                </footer>
-                                                                <div data-estimate="5" class="milenia-rating milenia-text-color--primary"></div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
-                                            <div class="milenia-grid-item">
-                                                <!--================ Entity ================-->
-                                                <article class="milenia-entity milenia-entity--format-image">
-                                                    <div class="milenia-entity-content milenia-aligner">
-                                                        <div class="milenia-aligner-outer">
-                                                            <div class="milenia-aligner-inner">
-                                                                <div class="milenia-entity-body">
-                                                                    <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
-                                                                        Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
-                                                                        Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.</p>
-                                                                </div>
-                                                                <header class="milenia-entity-header">
-
-                                                                    <div class="comment-author-info">
-                                                                        <cite class="fn milenia-color--black">Bradley Grosh</cite>
-                                                                    </div>
-
-                                                                    <div class="milenia-entity-meta">
-                                                                        <div>United Kingdom</div>
-                                                                    </div>
-
-                                                                </header>
-                                                                <footer class="milenia-entity-footer">
-                                                                    <div class="comment-author-avatar">
-                                                                        <a href="#" class="milenia-color--unchangeable">
-                                                                            <img src="images/author-image-5.png" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                </footer>
-                                                                <div data-estimate="5" class="milenia-rating milenia-text-color--primary"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <!--================ End of Entity ================-->
-                                            </div>
+                                                    </article>
+                                                    <!--================ End of Entity ================-->
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>

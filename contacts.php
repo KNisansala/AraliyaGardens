@@ -71,7 +71,9 @@
                             <main class="col-lg-4">
                                 <h3>Contact Details</h3>
                                 <!--================ Google Map ================-->
-                                <div id="gmap-1" data-height="340px" data-locations="[{&quot;lat&quot;: 40.7707307, &quot;lon&quot;: -74.0210859, &quot;icon&quot;: &quot;images/marker-blue.png&quot;, &quot;title&quot;: &quot;Main office&quot;}]" class="milenia-gmap"></div>
+                                <div id="gmap-1" data-height="340px" data-locations="[{&quot;lat&quot;: 40.7707307, &quot;lon&quot;: -74.0210859, &quot;icon&quot;: &quot;images/marker-blue.png&quot;, &quot;title&quot;: &quot;Main office&quot;}]" class="milenia-gmap">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.0446260202107!2d80.12317031528943!3d6.124696995565351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae177be1cba50d3%3A0xf157b67920de0fb8!2sAraliya+Gardens!5e0!3m2!1sen!2slk!4v1541745721172" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
                                 <!--================ End of Google Map ================-->
                                 <ul class="milenia-details-list milenia-list--unstyled">
                                     <li><span class="milenia-tc--dark">Address:&nbsp;</span>9863 - 9867 Mill Road, Cambridge, MG09 99HT</li>
@@ -154,7 +156,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="form-col">
-                                            <button type="submit" id="btnSubmit" class="milenia-btn">Submit</button>
+                                            <button type="submit" id="btnSubmit" class="milenia-btn milenia-btn--scheme-primary">Submit</button>
                                         </div>
                                     </div>
                                     <div class="form-col">
