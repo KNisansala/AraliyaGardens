@@ -53,7 +53,7 @@ $PHOTO_ALBUM = new PhotoAlbum($id)
                                 </ul>
                             </div>
                             <div class="body">
-                                <form class="form-horizontal"  method="post" action="post-and-get/album-photo.php" enctype="multipart/form-data"> 
+                                <form class="form-horizontal"  method="post" action="post-and-get/photo-album.php" enctype="multipart/form-data"> 
                                     <div class="col-md-12">                                       
                                         <div class="form-group form-float">
                                             <div class="form-line">
@@ -79,20 +79,20 @@ $PHOTO_ALBUM = new PhotoAlbum($id)
                                 <hr/>
                                 <div class="row clearfix">
                                     <?php
-                                    $ALBUM_PHOTO = AlbumPhoto::getAlbumPhotosById($id);
-                                    if (count($ALBUM_PHOTO) > 0) {
-                                        foreach ($ALBUM_PHOTO as $key => $album_photo) {
+                                    $PHOTO_ALBUM = PhotoAlbum::getPhotoAlbumPhotosById($id);
+                                    if (count($PHOTO_ALBUM) > 0) {
+                                        foreach ($PHOTO_ALBUM as $key => $photo_album) {
                                             ?>
-                                            <div class="col-md-3"  id="div<?php echo $album_photo['id']; ?>">
+                                            <div class="col-md-3"  id="div<?php echo $photo_album['id']; ?>">
                                                 <div class="photo-img-container">
-                                                    <img src="../upload/photo-album/gallery/thumb/<?php echo $album_photo['image_name']; ?>" class="img-responsive ">
+                                                    <img src="../upload/photo-album/gallery/thumb/<?php echo $photo_album['image_name']; ?>" class="img-responsive ">
                                                 </div>
                                                 <div class="img-caption">
-                                                    <p class="maxlinetitle"><?php echo $album_photo['caption']; ?></p>
+                                                    <p class="maxlinetitle"><?php echo $photo_album['caption']; ?></p>
                                                     <div class="d">
-                                                        <a href="#" class="delete-album-photo" data-id="<?php echo $album_photo['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
-                                                        <a href="edit-album-photo.php?id=<?php echo $album_photo['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
-                                                        <a href="arrange-album-photos.php?id=<?php echo $id; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
+                                                        <a href="#" class="delete-photo-album" data-id="<?php echo $photo_album['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
+                                                        <a href="edit-photo-album.php?id=<?php echo $photo_album['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
+                                                        <a href="arrange-photo-album.php?id=<?php echo $id; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
                                                     </div>
                                                 </div>
                                             </div>

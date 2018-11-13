@@ -14,31 +14,31 @@
         <!--================ Navigation ================-->
         <nav class="milenia-navigation-container milenia--nice-scrolled">
             <ul class="milenia-navigation-vertical">
-                <li class="menu-item menu-item-has-children current-menu-item">
+                <li class="menu-item current-menu-item">
                     <a href="index.php" class="milenia-ln--independent">Home</a>
                 </li>
-                <li class="menu-item menu-item-has-children">
+                <li class="menu-item">
                     <a href="about.php" class="milenia-ln--independent">About Us</a>
                 </li>
-                <li class="menu-item menu-item-has-children">
+                <li class="menu-item">
                     <a href="facilities.php" class="milenia-ln--independent">Facilities</a>
                 </li>
-                <li class="menu-item menu-item-has-children">
+                <li class="menu-item">
                     <a href="accommodations.php" class="milenia-ln--independent">Accommodations</a>
                 </li>
-                <li class="menu-item menu-item-has-children">
+                <li class="menu-item">
                     <a href="things-to-do.php" class="milenia-ln--independent">Things TO Do</a>
                 </li>
-                <li class="menu-item menu-item-has-children">
+                <li class="menu-item">
                     <a href="gallery.php" class="milenia-ln--independent">Gallery</a>
                 </li>
-                <li class="menu-item menu-item-has-children">
+                <li class="menu-item">
                     <a href="guest-feedback.php" class="milenia-ln--independent">Guest Feedback</a>
                 </li>
-                <li class="menu-item menu-item-has-children mega-menu">
+                <li class="menu-item">
                     <a href="booking.php" class="milenia-ln--independent">Booking</a>
                 </li>
-                <li class="menu-item menu-item-has-children">
+                <li class="menu-item">
                     <a href="contacts.php" class="milenia-ln--independent">Contact Us</a>
                 </li>
             </ul>
