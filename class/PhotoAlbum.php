@@ -108,18 +108,18 @@ class PhotoAlbum {
 
     public function deletePhotos() {
 
-        $ALBUM_PHOTOS = new AlbumPhoto(NULL);
+        $PHOTO_ALBUM = new Pho(NULL);
 
-        $allPhotos =  $ALBUM_PHOTOS->getAlbumPhotosById($this->id);
+        $allPhotos =  $PHOTO_ALBUM->getPhotoAlbumPhotosById($this->id);
 
         foreach ($allPhotos as $photo) {
 
-            $IMG =  $ALBUM_PHOTOS->image_name = $photo["image_name"];
+            $IMG =  $PHOTO_ALBUM->image_name = $photo["image_name"];
             unlink(Helper::getSitePath() . "upload/photo-album/gallery/" . $IMG);
             unlink(Helper::getSitePath() . "upload/photo-album/gallery/thumb/" . $IMG);
 
-             $ALBUM_PHOTOS->id = $photo["id"];
-             $ALBUM_PHOTOS->delete();
+             $PHOTO_ALBUM->id = $photo["id"];
+             $PHOTO_ALBUM->delete();
         }
     }
     

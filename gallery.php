@@ -102,19 +102,6 @@ $photo_albums = $PHOTO_ALBUM->all();
                                         </div>
                                     </div>
                                     <!--================ End of Gallery ================-->
-                                    <!--================ Pagination ================-->
-                                    <footer class="text-center">
-                                        <nav>
-                                            <ul class="milenia-list--unstyled milenia-pagination milenia-pagination--stretched">
-                                                <li class="milenia-pagination--pushed-to-left-md"><a href="#" class="prev page-numbers">Previous</a></li>
-                                                <li><a href="#" class="page-numbers">1</a></li>
-                                                <li><span class="page-numbers current">2</span></li>
-                                                <li><a href="#" class="page-numbers">3</a></li>
-                                                <li class="milenia-pagination--pushed-to-right-md"><a href="#" class="next page-numbers">Next</a></li>
-                                            </ul>
-                                        </nav>
-                                    </footer>
-                                    <!--================ End of Pagination ================-->
                                 </div>
                             </div>
                         </main>

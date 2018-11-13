@@ -62,7 +62,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             <a href="#"  class="delete-photo-album" data-id="<?php echo $photo_album['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
                                                             <a href="edit-photo-album.php?id=<?php echo $photo_album['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
                                                             <a href="arrange-photo-album.php?id=<?php echo $photo_album['id']; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
-                                                            <a href="view-album-photos.php?id=<?php echo $photo_album['id']; ?>">  <button class="glyphicon glyphicon-picture arrange-btn"></button></a>
+                                                            <a href="view-photo-album.php?id=<?php echo $photo_album['id']; ?>">  <button class="glyphicon glyphicon-picture arrange-btn"></button></a>
                                                         </div>
                                                     </div>
                                                 </div>
