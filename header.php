@@ -30,9 +30,7 @@
             <div class="milenia-aligner-outer">
               <div class="milenia-aligner-inner">
                 <div class="milenia-header-items">
-                  <div>
-                    <button type="button" data-arctic-modal="#search-modal" class="milenia-icon-btn"><i class="icon icon-magnifier"></i></button>
-                  </div>
+                  
                   <div>
                     <!--================ Languages List ================-->
                     <div class="milenia-dropdown milenia-dropdown--title-icon milenia-dropdown--languages">

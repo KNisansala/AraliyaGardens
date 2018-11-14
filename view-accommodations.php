@@ -52,27 +52,13 @@ $rooms = $ROOM->all();
         ?>
         <!--================ End of Hidden Sidebar ================-->
         <div id="milenia-page-wrapper" class="milenia-page-wrapper">
-            <!--================ Search Modal ================-->
-            <div class="milenia-d-none">
-                <div id="search-modal" class="milenia-modal milenia-modal--search">
-                    <button type="button" class="milenia-icon-btn arcticmodal-close"><i class="icon icon-cross"></i></button>
-                    <h3>Find Everything</h3>
-                    <!--================ Search Form ================-->
-                    <form role="search" method="get" class="milenia-singlefield-form milenia-form--fields-white milenia-searchform">
-                        <input type="text" name="s" placeholder="Search">
-                        <button type="submit"><i class="icon icon-magnifier"></i></button>
-                    </form>
-                    <!--================ End of Search Form ================-->
-                </div>
-            </div>
-            <!--================ End of Search Modal ================-->
             <!--================ Header ================-->
             <?php
             include 'header1.php';
             ?>
             <!--================ End of Header ================-->
             <!--================ Breadcrumb ================-->
-            <div data-bg-image-src="images/breadcrumb-bg-2.jpg" class="milenia-breadcrumb text-center milenia-colorizer--scheme-dark milenia-colorizer--parallax">
+            <div data-bg-image-src="images/banner.jpg" class="milenia-breadcrumb text-center milenia-colorizer--scheme-dark milenia-colorizer--parallax">
                 <div class="container">
                     <h1 class="milenia-page-title"><?php echo $ROOM->title; ?></h1>
                     <nav class="milenia-breadcrumb-path">
@@ -123,7 +109,7 @@ $rooms = $ROOM->all();
                                     </div>
                                     <div id="tab-description" tabindex="0" role="tabpanel" aria-labelledby="tab-description-link" class="milenia-tab">
                                         <span class="content"><p><?php echo $ROOM->description; ?></p></span>
-                                        <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Inquiry Now</a>
+                                        <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Book Now</a>
                                     </div>
                                 </div>
                             </main>

@@ -12,13 +12,13 @@
                                     <div class="milenia-info-widget-logo"><a href="index.html" class="milenia-ln--independent"><img src="images/logo-white.png" alt=""></a></div>
                                     <div class="milenia-grid milenia-grid--cols-3">
                                         <div class="milenia-grid-item">
-                                            <address><span class="milenia-text-color--contrast">Address: </span>9863 - 9867 Mill Road, <br>Cambridge, MG09 99HT </address><a href="#" class="milenia-uppercased-link">Get Direction</a>
+                                            <address><span class="milenia-text-color--contrast">Address: </span>Araliya Gardens, Katukoliha, <br>Dodanduwa, Hikkaduwa </address><a href="#" class="milenia-uppercased-link">Get Direction</a>
                                         </div>
                                         <div class="milenia-grid-item">
-                                            <address><span class="milenia-text-color--contrast">Phone: </span>+1 800 603 6035<br><span class="milenia-text-color--contrast">Fax: </span>+1 800 603 6038</address>
+                                            <address><span class="milenia-text-color--contrast">Phone: </span>+94 11 3 663500<br><span class="milenia-text-color--contrast">Fax: </span>+94 11 3 663500</address>
                                         </div>
                                         <div class="milenia-grid-item milenia-widget--email">
-                                            <address><span class="milenia-text-color--contrast">Email: </span><a href="mailto:#">mail@companyname.com</a></address>
+                                            <address><span class="milenia-text-color--contrast">Email: </span><a href="mailto:#">mail@sublime.lk</a></address>
                                             <ul class="milenia-social-icons milenia-list--unstyled">
                                                 <li><a href="#" style="background-position: 0% 29px;"><i class="fab fa-facebook-f"></i></a></li>
                                                 <li><a href="#" style="background-position: 0% 29px;"><i class="fab fa-twitter"></i></a></li>
@@ -49,18 +49,18 @@
                             <div class="milenia-grid-item-content">
                                 <nav class="milenia-tt-uppercase">
                                     <ul>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Facilities</a></li>
-                                        <li><a href="#">Accommodations</a></li>
-                                        <li><a href="#">Things To Do</a></li>
-                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="about.php">About Us</a></li>
+                                        <li><a href="facilities.php">Facilities</a></li>
+                                        <li><a href="accommodations.php">Accommodations</a></li>
+                                        <li><a href="things-to-do.php">Things To Do</a></li>
+                                        <li><a href="contacts.php">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
                     <!--================ End of Widget ================-->
-                    <div class="milenia-grid-item milenia-widget">Copyright © 2018 Milenia Beach Resort. All Rights Reserved.</div>
+                    <div class="milenia-grid-item milenia-widget">Copyright © 2018 Araliya Gardens. All Rights Reserved.</div>
                 </div>
             </div>
         </div>
