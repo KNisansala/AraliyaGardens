@@ -32,9 +32,6 @@
               <div class="milenia-aligner-inner">
                 <div class="milenia-header-items">
                   <div>
-                    <button type="button" data-arctic-modal="#search-modal" class="milenia-icon-btn"><i class="icon icon-magnifier"></i></button>
-                  </div>
-                  <div>
                     <!--================ Languages List ================-->
                     <div class="milenia-dropdown milenia-dropdown--title-icon milenia-dropdown--languages">
                       <button type="button" class="milenia-dropdown-title">EN<i class="fa fa-caret-down milenia-dropdown-icon--state-default"></i><i class="fa fa-caret-up milenia-dropdown-icon--state-opened"></i></button>

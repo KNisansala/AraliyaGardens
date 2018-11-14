@@ -15,7 +15,7 @@
         <nav class="milenia-navigation-container milenia--nice-scrolled">
             <ul class="milenia-navigation-vertical">
                 <li class="menu-item current-menu-item">
-                    <a href="index.php" class="milenia-ln--independent">Home</a>
+                    <a href="./" class="milenia-ln--independent">Home</a>
                 </li>
                 <li class="menu-item">
                     <a href="about.php" class="milenia-ln--independent">About Us</a>
@@ -50,12 +50,6 @@
     <!--================ Hidden Sidebar Footer ================-->
     <footer class="milenia-sidebar-hidden-footer">
         <div class="milenia-sidebar-hidden-items">
-            <div>
-                <ul class="milenia-sidebar-hidden-actions milenia-list--hr milenia-list--unstyled">
-                    <li><a href="#" data-arctic-modal="#search-modal" class="milenia-ln--independent">Search</a></li>
-                    <li><a href="#" class="milenia-ln--independent">Webcams</a></li>
-                </ul>
-            </div>
             <div>
                 <ul class="milenia-social-icons milenia-social-icon--scheme-secondary milenia-list--unstyled">
                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>

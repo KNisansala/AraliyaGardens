@@ -57,20 +57,6 @@ $sliders = Slider::all();
         <!--================ End of Hidden Sidebar ================-->
 
         <div id="milenia-page-wrapper" class="milenia-page-wrapper">
-            <!--================ Search Modal ================-->
-            <div class="milenia-d-none">
-                <div id="search-modal" class="milenia-modal milenia-modal--search">
-                    <button type="button" class="milenia-icon-btn arcticmodal-close"><i class="icon icon-cross"></i></button>
-                    <h3>Find Everything</h3>
-                    <!--================ Search Form ================-->
-                    <form role="search" method="get" class="milenia-singlefield-form milenia-form--fields-white milenia-searchform">
-                        <input type="text" name="s" placeholder="Search">
-                        <button type="submit"><i class="icon icon-magnifier"></i></button>
-                    </form>
-                    <!--================ End of Search Form ================-->
-                </div>
-            </div>
-            <!--================ End of Search Modal ================-->
 
             <!--================ Header ================-->
             <?php
@@ -143,10 +129,10 @@ $sliders = Slider::all();
                                             <h2 class="milenia-section-title">Araliya Gardens Hotel</h2>
                                             <span class="content"><p class="milenia-section-description milenia-section-description--style-2">Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. </p></span>
                                             <span class="content"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferme ntum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p></span>
-                                            <div class="milenia-sign"><img src="images/sign-1.png" alt=""><small>Managing Director</small></div>
+<!--                                            <div class="milenia-sign"><img src="images/sign-1.png" alt=""><small>Managing Director</small></div>-->
                                         </div>
                                         <div class="col-lg-6 offset-lg-1">
-                                            <figure class="milenia-album"><img src="images/single-gallery-image-1.jpg" alt="">
+                                            <figure class="milenia-album"><img src="images/DSC_8868.jpg" alt="">
                                                 <div class="milenia-action-buttons"></div>
                                             </figure>
                                         </div>
