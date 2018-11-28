@@ -64,6 +64,7 @@ $ROOM = new Room(NULL);
                                                             <a href="edit-room.php?id=<?php echo $room['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
                                                             <a href="arrange-room.php?id=<?php echo $room['id']; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
                                                             <a href="view-room-photos.php?id=<?php echo $room['id']; ?>">  <button class="glyphicon glyphicon-picture arrange-btn"></button></a>
+                                                            <a href="manage-features.php?id=<?php echo $room['id']; ?>">  <button class="glyphicon glyphicon-list arrange-btn"></button></a>
                                                         </div>
                                                     </div>
                                                 </div>

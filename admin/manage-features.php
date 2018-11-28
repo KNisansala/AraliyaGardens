@@ -1,13 +1,20 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
+
+$id = '';
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+$ROOM = new Room($id);
+?> 
 ?>
 <!DOCTYPE html>
 <html> 
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Room</title>
+        <title>Feature</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -18,6 +25,14 @@ include_once(dirname(__FILE__) . '/auth.php');
         <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet">
         <link href="css/themes/all-themes.css" rel="stylesheet" />
+
+        <style>
+            [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+                position: relative;
+                left: 0;
+                opacity: 1;
+            }
+        </style>
     </head>
 
     <body class="theme-red">
@@ -36,10 +51,10 @@ include_once(dirname(__FILE__) . '/auth.php');
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
-                                <h2>Create Room</h2>
+                                <h2>Manage Feature</h2>
                                 <ul class="header-dropdown">
                                     <li class="">
-                                        <a href="manage-room.php">
+                                        <a href="manage-features.php">
                                             <i class="material-icons">list</i> 
                                         </a>
                                     </li>
@@ -47,57 +62,26 @@ include_once(dirname(__FILE__) . '/auth.php');
                             </div>
                             <div class="body">
                                 <form class="form-horizontal"  method="post" action="post-and-get/room.php" enctype="multipart/form-data"> 
-                                    <div class="col-md-12">
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="text" id="title" class="form-control"  autocomplete="off" name="title" required="true">
-                                                <label class="form-label">Title</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="text" id="no_of_rooms" class="form-control" autocomplete="off" name="no_of_rooms" required="true">
-                                                <label class="form-label">Number of Rooms</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="text" id="price" class="form-control" autocomplete="off" name="price" required="true">
-                                                <label class="form-label">Price</label>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="col-md-12">                                       
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="file" id="image" class="form-control" name="image"  required="true">
+                                    <?php
+                                    foreach (RoomFeatures::all() as $room_feature) {
+                                        ?>
+                                        <div class="col-md-6">
+                                            <div class="form-group form-float">
+                                                <div class="">
+                                                    <input class="" type="checkbox" name="features[]" value="<?php echo $room_feature['id']; ?>" id="feature-<?php echo $room_feature['id']; ?>" />
+                                                    <span class="checkmark"></span>
+                                                    <label class="form-label"><?php echo $room_feature['title']; ?></label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <?php
+                                    }
+                                    ?>
 
-                                    <div class="col-md-12">
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="text" id="short_description" class="form-control" autocomplete="off" name="short_description" required="true">
-                                                <label class="form-label">Short Description</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <label for="description">Description</label>
-                                        <div class="form-line">
-                                            <textarea id="description" name="description" class="form-control" rows="5"></textarea> 
-                                        </div>
-
-                                    </div>
                                     <div class="col-md-12"> 
-                                        <input type="submit" data-id="<?php echo $room['id']; ?>" name="create" class="btn btn-primary m-t-15 waves-effect" value="create"/>
+                                        <input type="hidden" id="id" value="<?php echo $ROOM->id; ?>" name="id"/>
+                                        <input type="submit" name="manage-features" class="btn btn-primary m-t-15 waves-effect" value="manage features"/>
                                     </div>
                                     <div class="row clearfix">  </div>
                                     <hr/>
@@ -121,7 +105,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="js/admin.js"></script>
         <script src="js/demo.js"></script>
         <script src="js/add-new-ad.js" type="text/javascript"></script>
-
+        <script src="js/features.js" type="text/javascript"></script>
 
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>

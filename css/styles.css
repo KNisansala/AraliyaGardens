@@ -47,6 +47,11 @@
 .lb-top{
     margin-top: 1rem;
 }
+.check{
+    position: relative;
+    left: 0;
+    opacity: 1;
+}
 @media all and (max-width: 768px) {
     .milenia-section-title {
         font-size: 2.25rem;

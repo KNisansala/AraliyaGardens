@@ -8,6 +8,7 @@ if (isset($_GET['id'])) {
 }
 
 $ROOM = new Room($id);
+$ROOM_FEATURES = unserialize($ROOM->features);
 
 $rooms = $ROOM->all();
 ?>
@@ -95,7 +96,7 @@ $rooms = $ROOM->all();
                                             <img src="upload/room/gallery/<?php echo $photo['image_name']; ?>" alt="">
                                             <?php
                                         }
-                                        ?>
+                                        ?> 
                                     </div>
                                     <div data-sync="#simple-slideshow-1" class="owl-carousel owl-carousel--nav-edges owl-carousel--nav-onhover owl-carousel--nav-small milenia-simple-slideshow-thumbs">
                                         <?php
@@ -107,12 +108,92 @@ $rooms = $ROOM->all();
                                         }
                                         ?>
                                     </div>
-                                    <div id="tab-description" tabindex="0" role="tabpanel" aria-labelledby="tab-description-link" class="milenia-tab">
-                                        <span class="content"><p><?php echo $ROOM->description; ?></p></span>
-                                        <a href="#" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">Book Now</a>
+                                    <!--================ Tabs ================-->
+                                    <div class="milenia-tabs milenia-tabs--style-2 milenia-tabs--tour-sections-lg">
+                                        <!--================ Tabs Navigation ================-->
+                                        <div role="tablist" aria-label="Tour Sections v1" class="milenia-tabs-nav">
+                                            <span class="milenia-active">
+                                                <a id="tab-description-link" href="#tab-description" role="tab" aria-selected="false" aria-controls="tab-description" class="milenia-ln--independent milenia-tab-link">Description</a></span>
+                                            <span>
+                                                <a id="tab-amenities-link" href="#tab-amenities" role="tab" aria-selected="true" aria-controls="tab-amenities" class="milenia-ln--independent milenia-tab-link">Amenities</a>
+                                            </span>
+<!--                                            <span>
+                                                <a id="tab-rates-link" href="#tab-rates" role="tab" aria-selected="false" aria-controls="tab-rates" class="milenia-ln--independent milenia-tab-link">Rates</a>
+                                            </span>-->
+                                        </div>
+                                        <!--================ End of Tabs Navigation ================-->
+                                        <!--================ Tabs Container ================-->
+                                        <div class="milenia-tabs-container">
+                                            <!--================ Tab ================-->
+                                            <div id="tab-description" tabindex="0" role="tabpanel" aria-labelledby="tab-description-link" class="milenia-tab">
+                                                <span class="content"><p><?php echo $ROOM->description; ?></p></span>
+                                                <!--<a href="#" data-fancybox-album-src="[{&quot;src&quot;: &quot;images/floor-plan.png&quot;, &quot;opts&quot;: {&quot;caption&quot;: &quot;The floor plan&quot;}}]" class="milenia-btn milenia-btn--link milenia-btn--scheme-primary">View Floor Plan</a>-->
+                                            </div>
+                                            <!--================ End of Tab ================-->
+                                            <!--================ Tab ================-->
+                                            <div id="tab-amenities" tabindex="0" role="tabpanel" aria-labelledby="tab-amenities-link" class="milenia-tab">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <ul class="milenia-list--icon milenia-list--icon-big">
+                                                            <?php
+                                                            
+                                                            foreach ($ROOM_FEATURES as $room_feature) {
+                                                                $FEATURES = new RoomFeatures($room_feature);
+                                                                ?>
+                                                                <li><i class="<?php echo $FEATURES->icon; ?>"></i><?php echo $FEATURES->title; ?></li>
+                                                                <?php
+                                                            }
+                                                            ?>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--================ End of Tab ================-->
+                                            <!--================ Tab ================-->
+                                            <!--                                            <div id="tab-rates" tabindex="0" role="tabpanel" aria-labelledby="tab-rates-link" class="milenia-tab">
+                                                                                            <table aria-labelledby="table-label-1" class="milenia-table milenia-table--responsive-lg">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td data-cell-title="Season" class="milenia-color--black">Main season 1</td>
+                                                                                                        <td data-cell-title="Period">10 Mar – 30 Apr 2018</td>
+                                                                                                        <td data-cell-title="Price" class="milenia-color--black">$99.00/night</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td data-cell-title="Season" class="milenia-color--black">Christmas &amp; New Year's</td>
+                                                                                                        <td data-cell-title="Period">22 Dec 2018 - 6 Jan 2019</td>
+                                                                                                        <td data-cell-title="Price" class="milenia-color--black">$299.00/night</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td data-cell-title="Season" class="milenia-color--black">Main season 2</td>
+                                                                                                        <td data-cell-title="Period">1 May – 31 Oct 2018</td>
+                                                                                                        <td data-cell-title="Price" class="milenia-color--black">$249.00/night</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td data-cell-title="Season" class="milenia-color--black">School holidays</td>
+                                                                                                        <td data-cell-title="Period">2 Feb - 9 Mar 2019</td>
+                                                                                                        <td data-cell-title="Price" class="milenia-color--black">$199.00/night</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td data-cell-title="Season" class="milenia-color--black">Main season 3</td>
+                                                                                                        <td data-cell-title="Period">1 Nov – 21 Dec 2018</td>
+                                                                                                        <td data-cell-title="Price" class="milenia-color--black">$129.00/night</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td data-cell-title="Season" class="milenia-color--black">Weekend only</td>
+                                                                                                        <td data-cell-title="Period">Thursday through Sunday</td>
+                                                                                                        <td data-cell-title="Price" class="milenia-color--black">$159.00/night</td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table><small id="table-label-1" class="milenia-table-label">All prices are exclusive of GST. 15% Goods and Services tax is applicable above the standard rates.</small>
+                                                                                        </div>-->
+                                            <!--================ End of Tab ================-->
+                                        </div>
+                                        <!--================ End of Tabs Container ================-->
                                     </div>
+                                    <!--================ End of Tabs ================-->
                                 </div>
                             </main>
+
                             <!--================ Sidebar ================-->
                             <aside id="milenia-sidebar" class="milenia-sidebar col-lg-3 col-md-4">
                                 <div class="milenia-grid">
