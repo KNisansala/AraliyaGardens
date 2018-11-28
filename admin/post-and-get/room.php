@@ -12,7 +12,7 @@ if (isset($_POST['create'])) {
     $ROOM->description = $_POST['description'];
     $ROOM->no_of_rooms = $_POST['no_of_rooms'];
     $ROOM->price = $_POST['price'];
-    
+
     $dir_dest = '../../upload/room/';
 
     $handle = new Upload($_FILES['image']);
@@ -56,7 +56,7 @@ if (isset($_POST['create'])) {
         $VALID->addError("Your data was saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-         header("location: ../view-room-photos.php?id=" . $ROOM->id);
+        header("location: ../view-room-photos.php?id=" . $ROOM->id);
     } else {
 
         if (!isset($_SESSION)) {
@@ -135,6 +135,25 @@ if (isset($_POST['update'])) {
 
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
+}
+
+if (isset($_POST['manage-features'])) {
+
+    $ROOM = new Room($_POST['id']);
+    $serialized_array = serialize($_POST['features']);
+    $ROOM->features = $serialized_array;
+
+    $VALID = new Validator();
+
+    $ROOM->updateRoomFeatures();
+
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    $VALID->addError("Your changes saved successfully", 'success');
+    $_SESSION['ERRORS'] = $VALID->errors();
+
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 
 

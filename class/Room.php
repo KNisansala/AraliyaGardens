@@ -20,12 +20,13 @@ class Room {
     public $description;
     public $no_of_rooms;
     public $price;
+    public $features;
     public $queue;
 
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`title`,`image_name`,`short_description`,`description`,`no_of_rooms`,`price`,`queue` FROM `room` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`title`,`image_name`,`short_description`,`description`,`no_of_rooms`,`price`,`features`,`queue` FROM `room` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -38,6 +39,7 @@ class Room {
             $this->description = $result['description'];
             $this->no_of_rooms = $result['no_of_rooms'];
             $this->price = $result['price'];
+            $this->features = $result['features'];
             $this->queue = $result['queue'];
 
             return $this;
@@ -94,6 +96,22 @@ class Room {
                 . "`queue` ='" . $this->queue . "' "
                 . "WHERE `id` = '" . $this->id . "'";
 
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+
+        if ($result) {
+            return $this->__construct($this->id);
+        } else {
+            return FALSE;
+        }
+    }
+    
+    public function updateRoomFeatures() {
+
+        $query = "UPDATE  `room` SET "
+                . "`features` ='" . $this->features . "' "
+                . "WHERE `id` = '" . $this->id . "'";
         $db = new Database();
 
         $result = $db->readQuery($query);
