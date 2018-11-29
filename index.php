@@ -25,7 +25,7 @@ $sliders = Slider::all();
         <!--================ Mobile specific metas ================-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--================ Favicon ================-->
-        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="shortcut icon" href="images/favicon.png">
         <!--================ Google web fonts ================-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700|Open+Sans:200,300,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i">
         <!--================ Vendor CSS ================-->
@@ -127,12 +127,14 @@ $sliders = Slider::all();
                                         <div class="col-lg-5">
                                             <h6 class="milenia-section-subtitle milenia-color--unchangeable">Welcome To</h6>
                                             <h2 class="milenia-section-title">Araliya Gardens Hotel</h2>
-                                            <span class="content"><p class="milenia-section-description milenia-section-description--style-2">Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. </p></span>
-                                            <span class="content"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferme ntum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. </p></span>
+                                            <span><p class="content">Araliya Gardens, truly an amazing place located near beautiful city Hikkaduwa. Featuring free WiFi and a restaurant, Araliya Gardens offers accommodation in Hikkaduwa, 1.5 Km from the Hikkaduwa Beach. The guest house has a year-round outdoor pool and terrace, and guests can enjoy a meal at the restaurant. Free private parking is available on site.</p></span>
+                                <span><p class="content">Some rooms feature a seating area where you can relax. A terrace or balcony are featured in certain rooms. The rooms are equipped with a private bathroom. A flat-screen TV with satellite channels is provided.</p></span>
+                                <span><p class="content">Bike hire and car hire are available at this guest house and the area is popular for snorkeling. Guests can enjoy various activities in the surroundings, including windsurfing, diving and cycling. Bentota is 36 km from Araliya Gardens, while Galle is 12 km away.</p></span>
+                                <span><p class="content">This property is also rated for the best value in Hikkaduwa! Guests are getting more for their money when compared to other properties in this city.</p></span>
 <!--                                            <div class="milenia-sign"><img src="images/sign-1.png" alt=""><small>Managing Director</small></div>-->
                                         </div>
                                         <div class="col-lg-6 offset-lg-1">
-                                            <figure class="milenia-album"><img src="images/DSC_8868.jpg" alt="">
+                                            <figure class="milenia-album"><img src="images/DSC_9101.jpg" alt="">
                                                 <div class="milenia-action-buttons"></div>
                                             </figure>
                                         </div>

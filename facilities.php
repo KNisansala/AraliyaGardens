@@ -17,7 +17,7 @@ $Facilities = $FACILITIES->all();
         <!--================ Mobile specific metas ================-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--================ Favicon ================-->
-        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="shortcut icon" href="images/favicon.png">
         <!--================ Google web fonts ================-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700|Open+Sans:200,300,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i">
         <!--================ Vendor CSS ================-->

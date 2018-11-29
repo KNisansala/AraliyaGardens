@@ -19,7 +19,7 @@
             <div class="milenia-aligner-outer">
               <div class="milenia-aligner-inner">
                 <div class="milenia-header-items">
-                  <div><a href="index.html" class="milenia-ln--independent"><img src="images/logo-white.png" alt=""></a></div>
+                  <div><a href="index.html" class="milenia-ln--independent"><img src="images/logo-white1.png" alt=""></a></div>
                 </div>
               </div>
             </div>
