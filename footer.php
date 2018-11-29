@@ -9,7 +9,7 @@
                         <div class="milenia-grid-item-inner">
                             <div class="milenia-grid-item-content">
                                 <div class="milenia-info-widget">
-                                    <div class="milenia-info-widget-logo"><a href="index.html" class="milenia-ln--independent"><img src="images/logo-white.png" alt=""></a></div>
+                                    <div class="milenia-info-widget-logo"><a href="./" class="milenia-ln--independent"><img src="images/logo-white1.png" alt=""></a></div>
                                     <div class="milenia-grid milenia-grid--cols-3">
                                         <div class="milenia-grid-item">
                                             <address><span class="milenia-text-color--contrast">Address: </span>Araliya Gardens, Katukoliha, <br>Dodanduwa, Hikkaduwa </address><a href="#" class="milenia-uppercased-link">Get Direction</a>

@@ -25,7 +25,7 @@ $rooms = $ROOM->all();
         <!--================ Mobile specific metas ================-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--================ Favicon ================-->
-        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="shortcut icon" href="images/favicon.png">
         <!--================ Google web fonts ================-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700|Open+Sans:200,300,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i|Frank+Ruhl+Libre:500">
         <!--================ Vendor CSS ================-->
@@ -252,6 +252,7 @@ $rooms = $ROOM->all();
         <script src="vendors/modernizr.js"></script>
         <script src="vendors/jquery-3.3.1.min.js"></script>
         <script src="vendors/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="plugins/fontawesome/js/fontawesome.min.js" type="text/javascript"></script>
         <script src="vendors/jquery.easing.1.3.min.js"></script>
         <script src="vendors/instafeed.min.js"></script>
         <script src="vendors/instafeed.wrapper.min.js"></script>
