@@ -12,8 +12,8 @@ $rooms = $ROOM->all();
         <title>Araliya Gardens | Rooms</title>
         <meta charset="UTF-8">
         <meta name="author" content="">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
+        <meta name="description" content="Araliya Gardens, truly an amazing place located near beautiful city Hikkaduwa. Featuring free WiFi and a restaurant, Araliya Gardens offers accommodation in Hikkaduwa, 1.5 Km from the Hikkaduwa Beach. The guest house has a year-round outdoor pool and terrace, and guests can enjoy a meal at the restaurant. Free private parking is available on site.">
+        <meta name="keywords" content="araliya gardens, accommodations in araliya gardens, villas in araliya gardens, villas in hikkaduwa, hikkaduwa villas, villa with garden view, suite with balcony, apartment with balcony, double room, superior triple room<?php foreach ($rooms as $room){ echo ','.$room['title'];}?>">
         <!--================ Mobile specific metas ================-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--================ Favicon ================-->

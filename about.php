@@ -5,8 +5,8 @@
         <title>Araliya Gardens | About Us</title>
         <meta charset="UTF-8">
         <meta name="author" content="">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
+        <meta name="description" content="Araliya Gardens, truly an amazing place located near beautiful city Hikkaduwa. Featuring free WiFi and a restaurant, Araliya Gardens offers accommodation in Hikkaduwa, 1.5 Km from the Hikkaduwa Beach. The guest house has a year-round outdoor pool and terrace, and guests can enjoy a meal at the restaurant. Free private parking is available on site.">
+        <meta name="keywords" content="about araliya gardens, araliya gardens, araliya gardens villa hikkaduwa, hikkaduwa araliya gardens villa, hikkaduwa villas, villas in hikkaduwa, villas hikkaduwa, ">
         <!--================ Mobile specific metas ================-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--================ Favicon ================-->
