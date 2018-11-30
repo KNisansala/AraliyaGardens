@@ -19,8 +19,8 @@ $ThingsToDo = $THINGS_TO_DO->all();
         <title>Araliya Gardens | <?php echo $THINGS_TO_DO->title; ?></title>
         <meta charset="UTF-8">
         <meta name="author" content="">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
+        <meta name="description" content="Araliya Gardens, truly an amazing place located near beautiful city Hikkaduwa. Featuring free WiFi and a restaurant, Araliya Gardens offers accommodation in Hikkaduwa, 1.5 Km from the Hikkaduwa Beach. The guest house has a year-round outdoor pool and terrace, and guests can enjoy a meal at the restaurant. Free private parking is available on site.">
+        <meta name="keywords" content="things to do, things to do in hikkaduwa, things to do in sri lanka, araliya gardens, hikkaduwa sri lanka, activities in hikkaduwa, activities in sri lanka, destinations in hikkaduwa, destinations in sri lanka<?php foreach ($ThingsToDo as $things_to_do){ echo ','.$things_to_do['title'];}?>">
         <!--================ Mobile specific metas ================-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--================ Favicon ================-->

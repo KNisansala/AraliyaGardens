@@ -20,8 +20,8 @@ $sliders = Slider::all();
         <title>Araliya Gardens | Home</title>
         <meta charset="UTF-8">
         <meta name="author" content="">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
+        <meta name="description" content="Araliya Gardens, truly an amazing place located near beautiful city Hikkaduwa. Featuring free WiFi and a restaurant, Araliya Gardens offers accommodation in Hikkaduwa, 1.5 Km from the Hikkaduwa Beach. The guest house has a year-round outdoor pool and terrace, and guests can enjoy a meal at the restaurant. Free private parking is available on site.">
+        <meta name="keywords" content="araliya gardens, airport transfer, araliyagardens, villas in hikkaduwa, hikkaduwa villas, villas in sri lanka, attractions in hikkaduwa, attractions in sri lanka, things to do in hikkaduwa, things to do in sri lanka, sri lanka holiday trip, tours in sri lanka, visit sri lanka, villa sites">
         <!--================ Mobile specific metas ================-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--================ Favicon ================-->
@@ -124,16 +124,16 @@ $sliders = Slider::all();
                                 <!--================ Content Section Welcome================-->
                                 <section class="milenia-section milenia-colorizer--scheme-white">
                                     <div class="row align-items-center">
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-6">
                                             <h6 class="milenia-section-subtitle milenia-color--unchangeable">Welcome To</h6>
                                             <h2 class="milenia-section-title">Araliya Gardens Hotel</h2>
                                             <span><p class="content">Araliya Gardens, truly an amazing place located near beautiful city Hikkaduwa. Featuring free WiFi and a restaurant, Araliya Gardens offers accommodation in Hikkaduwa, 1.5 Km from the Hikkaduwa Beach. The guest house has a year-round outdoor pool and terrace, and guests can enjoy a meal at the restaurant. Free private parking is available on site.</p></span>
-                                <span><p class="content">Some rooms feature a seating area where you can relax. A terrace or balcony are featured in certain rooms. The rooms are equipped with a private bathroom. A flat-screen TV with satellite channels is provided.</p></span>
-                                <span><p class="content">Bike hire and car hire are available at this guest house and the area is popular for snorkeling. Guests can enjoy various activities in the surroundings, including windsurfing, diving and cycling. Bentota is 36 km from Araliya Gardens, while Galle is 12 km away.</p></span>
-                                <span><p class="content">This property is also rated for the best value in Hikkaduwa! Guests are getting more for their money when compared to other properties in this city.</p></span>
-<!--                                            <div class="milenia-sign"><img src="images/sign-1.png" alt=""><small>Managing Director</small></div>-->
+                                            <span><p class="content">Some rooms feature a seating area where you can relax. A terrace or balcony are featured in certain rooms. The rooms are equipped with a private bathroom. A flat-screen TV with satellite channels is provided.</p></span>
+                                            <span><p class="content">Bike hire and car hire are available at this guest house and the area is popular for snorkeling. Guests can enjoy various activities in the surroundings, including windsurfing, diving and cycling. Bentota is 36 km from Araliya Gardens, while Galle is 12 km away.</p></span>
+                                            <span><p class="content">This property is also rated for the best value in Hikkaduwa! Guests are getting more for their money when compared to other properties in this city.</p></span>
+            <!--                                            <div class="milenia-sign"><img src="images/sign-1.png" alt=""><small>Managing Director</small></div>-->
                                         </div>
-                                        <div class="col-lg-6 offset-lg-1">
+                                        <div class="col-lg-6">
                                             <figure class="milenia-album"><img src="images/DSC_9101.jpg" alt="">
                                                 <div class="milenia-action-buttons"></div>
                                             </figure>
