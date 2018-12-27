@@ -12,7 +12,7 @@
                                     <div class="milenia-info-widget-logo"><a href="./" class="milenia-ln--independent"><img src="images/logo-white1.png" alt=""></a></div>
                                     <div class="milenia-grid milenia-grid--cols-3">
                                         <div class="milenia-grid-item">
-                                            <address><span class="milenia-text-color--contrast">Address: </span>Araliya Gardens, Katukoliha, <br>Dodanduwa, Hikkaduwa </address><a href="#" class="milenia-uppercased-link">Get Direction</a>
+                                            <address><span class="milenia-text-color--contrast">Address: </span>Araliya Gardens, Katukoliha, <br>Dodanduwa, Hikkaduwa </address>
                                         </div>
                                         <div class="milenia-grid-item">
                                             <address><span class="milenia-text-color--contrast">Phone: </span>+94 11 3 663500<br><span class="milenia-text-color--contrast">Fax: </span>+94 11 3 663500</address>

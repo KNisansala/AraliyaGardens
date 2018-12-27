@@ -13,7 +13,11 @@ $rooms = $ROOM->all();
         <meta charset="UTF-8">
         <meta name="author" content="">
         <meta name="description" content="Araliya Gardens, truly an amazing place located near beautiful city Hikkaduwa. Featuring free WiFi and a restaurant, Araliya Gardens offers accommodation in Hikkaduwa, 1.5 Km from the Hikkaduwa Beach. The guest house has a year-round outdoor pool and terrace, and guests can enjoy a meal at the restaurant. Free private parking is available on site.">
-        <meta name="keywords" content="araliya gardens, accommodations in araliya gardens, villas in araliya gardens, villas in hikkaduwa, hikkaduwa villas, villa with garden view, suite with balcony, apartment with balcony, double room, superior triple room<?php foreach ($rooms as $room){ echo ','.$room['title'];}?>">
+        <meta name="keywords" content="araliya gardens, accommodations in araliya gardens, villas in araliya gardens, villas in hikkaduwa, hikkaduwa villas, villa with garden view, suite with balcony, apartment with balcony, double room, superior triple room<?php
+        foreach ($rooms as $room) {
+            echo ',' . $room['title'];
+        }
+        ?>">
         <!--================ Mobile specific metas ================-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--================ Favicon ================-->
@@ -137,139 +141,22 @@ $rooms = $ROOM->all();
                                     <div class="milenia-grid-item-inner">
                                         <div class="milenia-grid-item-content">
                                             <div class="milenia-colorizer--scheme-dark">
-                                                <h5 class="milenia-widget-title">Check Availability</h5><small class="form-caption">Required fields are followed by *</small>
-                                                <form class="milenia-booking-form milenia-booking-form--style-3">
-                                                    <div class="form-group">
-                                                        <div class="form-col form-col--location">
-                                                            <div class="form-control">
-                                                                <label>Select Hotel Location</label><span class="milenia-field-datepicker milenia-field-datepicker--style-3 milenia-field-datepicker--location">Rome, Italy</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="form-col form-col--arrival-date">
-                                                            <div class="form-control">
-                                                                <label for="booking-form-arrival-date-3">Arrival Date *</label><span class="milenia-field-datepicker milenia-field-datepicker--style-3">Monday 15th April, 2019</span>
-                                                                <input type="text" id="booking-form-arrival-date-3" name="booking-form-arrival-date-3" class="milenia-datepicker milenia-field-datepicker-invoker">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="form-col form-col--departure-date">
-                                                            <div class="form-control">
-                                                                <label for="booking-form-departure-date-3">Departure Date *</label><span class="milenia-field-datepicker milenia-field-datepicker--style-3">Saturday 27th April, 2019</span>
-                                                                <input type="text" id="booking-form-departure-date-3" name="booking-form-arrival-date-3" class="milenia-datepicker milenia-field-datepicker-invoker">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="form-col-6">
-                                                            <div class="form-control">
-                                                                <label>Room Type</label>
-                                                                <div class="milenia-custom-select">
-                                                                    <select data-default-text="Classic">
-                                                                        <option>Classic</option>
-                                                                        <option>Double</option>
-                                                                        <option>Delux</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-col-6">
-                                                            <div class="form-control">
-                                                                <label>Rooms</label>
-                                                                <div class="milenia-custom-select">
-                                                                    <select data-default-text="1">
-                                                                        <option>1</option>
-                                                                        <option>2</option>
-                                                                        <option>3</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="form-col-6">
-                                                            <div class="form-control">
-                                                                <label>Adults</label>
-                                                                <div class="milenia-custom-select">
-                                                                    <select data-default-text="1">
-                                                                        <option>1</option>
-                                                                        <option>2</option>
-                                                                        <option>3</option>
-                                                                        <option>4</option>
-                                                                        <option>5</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-col-6">
-                                                            <div class="form-control">
-                                                                <label>Children</label>
-                                                                <div class="milenia-custom-select">
-                                                                    <select data-default-text="1">
-                                                                        <option>1</option>
-                                                                        <option>2</option>
-                                                                        <option>3</option>
-                                                                        <option>4</option>
-                                                                        <option>5</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="form-col">
-                                                            <div class="form-control">
-                                                                <label>Price Per Night</label>
-                                                                <div class="milenia-range-slider-field">
-                                                                    <input type="text" value="$99-$999" name="check_availability_price" readonly class="milenia-range-slider-input">
-                                                                    <div class="milenia-range-slider"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="form-col">
-                                                            <div class="form-control">
-                                                                <label class="milenia-toggled-fields-invoker milenia-toggled-fields-invoker--opened">Facility</label>
-                                                                <div style="display: block;" class="milenia-toggled-fields">
-                                                                    <input type="checkbox" name="checkbox-1" id="checkbox-1">
-                                                                    <label for="checkbox-1" class="milenia-label-checkbox">Air conditioner</label>
-                                                                    <input type="checkbox" name="checkbox-2" id="checkbox-2" checked="checked">
-                                                                    <label for="checkbox-2" class="milenia-label-checkbox">Balcony</label>
-                                                                    <input type="checkbox" name="checkbox-3" id="checkbox-3" checked="checked">
-                                                                    <label for="checkbox-3" class="milenia-label-checkbox">Family rooms</label>
-                                                                    <input type="checkbox" name="checkbox-4" id="checkbox-4">
-                                                                    <label for="checkbox-4" class="milenia-label-checkbox">Fitness center</label>
-                                                                    <input type="checkbox" name="checkbox-5" id="checkbox-5">
-                                                                    <label for="checkbox-5" class="milenia-label-checkbox">Flat-screen TV</label>
-                                                                    <input type="checkbox" name="checkbox-6" id="checkbox-6">
-                                                                    <label for="checkbox-6" class="milenia-label-checkbox">Free WiFi</label>
-                                                                    <input type="checkbox" name="checkbox-7" id="checkbox-7">
-                                                                    <label for="checkbox-7" class="milenia-label-checkbox">Non-smoking rooms</label>
-                                                                    <input type="checkbox" name="checkbox-8" id="checkbox-8">
-                                                                    <label for="checkbox-8" class="milenia-label-checkbox">Parking</label>
-                                                                    <input type="checkbox" name="checkbox-9" id="checkbox-9">
-                                                                    <label for="checkbox-9" class="milenia-label-checkbox">Pets allowed</label>
-                                                                    <input type="checkbox" name="checkbox-10" id="checkbox-10">
-                                                                    <label for="checkbox-10" class="milenia-label-checkbox">Rooms service</label>
-                                                                    <input type="checkbox" name="checkbox-11" id="checkbox-11">
-                                                                    <label for="checkbox-11" class="milenia-label-checkbox">Spa &amp; wellness center</label>
-                                                                    <input type="checkbox" name="checkbox-12" id="checkbox-12">
-                                                                    <label for="checkbox-12" class="milenia-label-checkbox">Swimming pool</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="form-col form-col--action">
-                                                            <div class="form-control">
-                                                                <button type="submit" class="milenia-btn milenia-btn--huge milenia-btn--scheme-primary">Check Availability</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
+                                                <h6 class="milenia-widget-title">Facilities</h6>
+                                                <ul class="milenia-list--icon milenia-list--icon-big">
+                                                    <li><i class="milenia-font-icon-double-bed"></i>Double bed</li>
+                                                    <li><i class="milenia-font-icon-table-chairs-umbrella"></i>Balcony</li>
+                                                    <li><i class="milenia-font-icon-pool"></i>Pool</li>
+                                                    <li><i class="milenia-font-icon-air-conditioner"></i>Air Conditioner</li>
+                                                    <li><i class="milenia-font-icon-wi-fi"></i>WI-FI</li>
+                                                    <li><i class="milenia-font-icon-bathtub"></i>Private Bathroom</li>
+                                                    <li><i class="milenia-font-icon-shower"></i>Shower</li>
+                                                    <li><i class="milenia-font-icon-hanger"></i>Wardorbe</li>
+                                                    <li><i class="milenia-font-icon-fan"></i>Fan</li>
+                                                    <li><i class="milenia-font-icon-tv"></i>Flat Screen TV</li>
+                                                    <li><i class="milenia-font-icon-parking2"></i>Private Parking</li>
+                                                    <li><i class="milenia-font-icon-dish2"></i>Room Service</li>
+                                                    
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>

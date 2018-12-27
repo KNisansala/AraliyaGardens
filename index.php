@@ -75,58 +75,13 @@ $sliders = Slider::all();
                         <main class="col">
                             <div class="milenia-entity-content">
                                 <!--================ Content Section ================-->
-                                <!--                                <div class="milenia-section milenia-section--no-py">
-                                                                    <form class="milenia-booking-form milenia-booking-form--style-1">
-                                                                        <div class="form-group">
-                                                                            <div class="form-col form-col--arrival-date">
-                                                                                <div class="form-control">
-                                                                                    <label for="booking-form-arrival-date">Arrival Date</label><span class="milenia-field-datepicker milenia-field-datepicker--style-1"><span class="milenia-field-datepicker-day">15</span><span class="milenia-field-datepicker-others"><span class="milenia-field-datepicker-month-year">April, 2019</span><span class="milenia-field-datepicker-dayname">Monday</span></span></span>
-                                                                                    <input type="text" id="booking-form-arrival-date" name="booking-form-arrival-date" class="milenia-datepicker milenia-field-datepicker-invoker">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-col form-col--departure-date">
-                                                                                <div class="form-control">
-                                                                                    <label for="booking-form-departure-date">Departure Date</label><span class="milenia-field-datepicker milenia-field-datepicker--style-1"><span class="milenia-field-datepicker-day">27</span><span class="milenia-field-datepicker-others"><span class="milenia-field-datepicker-month-year">April, 2019</span><span class="milenia-field-datepicker-dayname">Saturday</span></span></span>
-                                                                                    <input type="text" id="booking-form-departure-date" name="booking-form-arrival-date" class="milenia-datepicker milenia-field-datepicker-invoker">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-col form-col--adults">
-                                                                                <div class="form-control">
-                                                                                    <label>Adults</label>
-                                                                                    <div class="milenia-field-counter">
-                                                                                        <div class="milenia-field-counter-value">1</div>
-                                                                                        <input type="hidden" name="booking-form-adults" value="1" class="milenia-field-counter-target">
-                                                                                        <button type="button" class="milenia-field-counter-control milenia-field-counter-control--decrease"></button>
-                                                                                        <button type="button" class="milenia-field-counter-control milenia-field-counter-control--increase"></button>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-col form-col--children">
-                                                                                <div class="form-control">
-                                                                                    <label>Children</label>
-                                                                                    <div class="milenia-field-counter">
-                                                                                        <div class="milenia-field-counter-value">0</div>
-                                                                                        <input type="hidden" name="booking-form-children" value="0" class="milenia-field-counter-target">
-                                                                                        <button type="button" class="milenia-field-counter-control milenia-field-counter-control--decrease"></button>
-                                                                                        <button type="button" class="milenia-field-counter-control milenia-field-counter-control--increase"></button>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-col form-col--action">
-                                                                                <div class="form-control">
-                                                                                    <button type="submit" class="milenia-btn milenia-btn--huge milenia-btn--scheme-primary">Check Availability</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>-->
                                 <!--================ End of Content Section ================-->
                                 <!--================ Content Section Welcome================-->
                                 <section class="milenia-section milenia-colorizer--scheme-white">
                                     <div class="row align-items-center">
                                         <div class="col-lg-6">
                                             <h6 class="milenia-section-subtitle milenia-color--unchangeable">Welcome To</h6>
-                                            <h2 class="milenia-section-title">Araliya Gardens Hotel</h2>
+                                            <h2 class="milenia-section-title">Araliya Gardens</h2>
                                             <span><p class="content">Araliya Gardens, truly an amazing place located near beautiful city Hikkaduwa. Featuring free WiFi and a restaurant, Araliya Gardens offers accommodation in Hikkaduwa, 1.5 Km from the Hikkaduwa Beach. The guest house has a year-round outdoor pool and terrace, and guests can enjoy a meal at the restaurant. Free private parking is available on site.</p></span>
                                             <span><p class="content">Some rooms feature a seating area where you can relax. A terrace or balcony are featured in certain rooms. The rooms are equipped with a private bathroom. A flat-screen TV with satellite channels is provided.</p></span>
                                             <span><p class="content">Bike hire and car hire are available at this guest house and the area is popular for snorkeling. Guests can enjoy various activities in the surroundings, including windsurfing, diving and cycling. Bentota is 36 km from Araliya Gardens, while Galle is 12 km away.</p></span>
@@ -141,7 +96,19 @@ $sliders = Slider::all();
                                     </div>
                                 </section>
                                 <!--================ End of Content Section Welcome ================-->
-
+                                <!--================ End of Content Section ================-->
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+            <div class="milenia-content milenia-content--no-py b-color">
+                <div class="container">
+                    <div class="row">
+                        <main class="col">
+                            <div class="milenia-entity-content">
+                                <!--================ Content Section ================-->
+                                <!--================ End of Content Section ================-->
                                 <!--================ Content Section Rooms ================-->
                                 <section class="milenia-section milenia-color--black milenia-section--stretched milenia-colorizer--scheme-lightest">
                                     <h6 class="milenia-section-subtitle milenia-color--unchangeable text-center">The pleasure of</h6>
@@ -190,7 +157,7 @@ $sliders = Slider::all();
                                                                                             <a href="view-accommodations.php?id=<?php echo $room["id"]; ?>" class="milenia-color--unchangeable"><?php echo $room['title']; ?></a></h2>
                                                                                     </header>
                                                                                     <div class="milenia-entity-body">
-                                                                                        <span class="content"><p><?php echo substr($room['short_description'], 0, 400) . '...'; ?></p></span>
+                                                                                        <span class="content"><p><?php echo substr($room['short_description'], 0, 150) . '...'; ?></p></span>
                                                                                     </div>
                                                                                     <footer class="milenia-entity-footer">
                                                                                         <a href="view-accommodations.php?id=<?php echo $room["id"]; ?>" class="milenia-btn">Details</a>
@@ -235,9 +202,21 @@ $sliders = Slider::all();
                                     <!--================ End of Tabs ================-->
                                 </section>
                                 <!--================ End of Content Section Rooms ================-->
-
+                                <!--================ End of Content Section ================-->
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+            <div class="milenia-content milenia-content--no-py ">
+                <div class="container">
+                    <div class="row">
+                        <main class="col">
+                            <div class="milenia-entity-content">
+                                <!--================ Content Section ================-->
+                                <!--================ End of Content Section ================-->
                                 <!--================ Content Section Testimonials ================-->
-                                <section class="milenia-section">
+                                <section class="milenia-section milenia-colorizer--scheme-white">
                                     <div class="milenia-colorizer--scheme-white">
                                         <div class="row">
                                             <div class="col-lg-8 offset-lg-2">

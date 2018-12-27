@@ -67,7 +67,7 @@ $comments = $COMMENT->all();
             </div>
             <!--================ End of Breadcrumb ================-->
 
-            <div class="milenia-content milenia-content--no-pb ">
+            <div class="milenia-content1 milenia-content--no-pb ">
                 <div class="container">
 
                     <!--================ Content Section ================-->

@@ -1956,7 +1956,7 @@ body.milenia-body--border-layout .milenia-section:not(.milenia-section--no-py).m
 }
 
 .milenia-sidebar .milenia-widget:not(.milenia-widget--list-horizontal) ul:not(.milenia-list--unstyled) {
-    font-size: 1rem;
+    font-size: 15px;
     line-height: 1.625rem;
 }
 
@@ -2167,7 +2167,7 @@ body.milenia-body--border-layout .milenia-section:not(.milenia-section--no-py).m
 
 .milenia-widget .milenia-entities .milenia-entity-title {
     font-size: 1.125rem;
-    line-height: 1.63125rem;
+    line-height: 22px;
 }
 
 .milenia-widget .milenia-entities .milenia-entity-title a:not(.milenia-ln--independent):not(.milenia-btn) {
@@ -2627,7 +2627,7 @@ body.milenia-body--border-layout .milenia-section:not(.milenia-section--no-py).m
 }
 
 .milenia-widget--check-availability [class*="milenia-colorizer--scheme-"] {
-    padding: 1.45rem 1.625rem 0;
+    padding: 1.45rem 1.625rem 1.45rem;
 }
 
 .milenia-widget--check-availability [class*="milenia-colorizer--scheme-"] .milenia-booking-form--style-3 .form-group:first-child .form-col {
@@ -7436,8 +7436,8 @@ table tbody, table thead, table tfoot, table tr, table th, table td {
 }
 
 .milenia-entities--style-1 .milenia-entity-title {
-    font-size: 2.25rem;
-    line-height: 2.4375rem;
+    font-size: 1.8rem;
+    line-height: 0.4375rem;
 }
 
 .milenia-entities--style-1 .milenia-entity::after {
@@ -9342,7 +9342,7 @@ table tbody, table thead, table tfoot, table tr, table th, table td {
 }
 
 .milenia-entities--style-15 .milenia-entity-title {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
     line-height: 1.083;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
@@ -10225,7 +10225,7 @@ table tbody, table thead, table tfoot, table tr, table th, table td {
 
 .milenia-tabbed-carousel-thumb-caption {
     font-family: "Playfair Display", serif;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 1.125rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -10462,8 +10462,8 @@ table tbody, table thead, table tfoot, table tr, table th, table td {
 
 .milenia-testimonial blockquote {
     font-family: "Old Standard TT", serif;
-    font-size: 1.475rem;
-    line-height: 3.25rem;
+    font-size: 18px;
+    line-height: 2.2rem;
     font-style: italic;
     color: #1c1c1c;
 }
@@ -18630,8 +18630,8 @@ textarea {
         padding-right: 0;
     }
     .milenia-testimonial blockquote {
-        font-size: 1.5rem;
-        line-height: 2.4375rem;
+        font-size: 1.1rem;
+        line-height: 1.4375rem;
     }
     .rev-has-scrollbottom-icon::after, .rev-has-scrollbottom-icon::before {
         display: none;
